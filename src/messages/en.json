@@ -1,0 +1,169 @@
+{
+  "Metadata": {
+    "title": "Software development, cloud and AI for your projects",
+    "description": "Talum designs and builds digital projects, from initial planning to production."
+  },
+  "Navigation": {
+    "primary": "Primary",
+    "services": "Services",
+    "projects": "Projects",
+    "advice": "Advice",
+    "about": "About",
+    "estimate": "Estimator",
+    "contact": "Discuss your project",
+    "contactCta": "Discuss your project",
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "switchToEnglish": "Lire ce site en français"
+  },
+  "HomePage": {
+    "eyebrow": "Talum · Lille & Abidjan",
+    "title": "Your digital projects, from planning to production.",
+    "intro": "Web and application development, cloud & DevOps, project management, artificial intelligence and technical consulting. One point of contact, from idea to ongoing support.",
+    "estimateCta": "Estimate my project",
+    "projectsCta": "View projects",
+    "proofLabel": "Project in production",
+    "proofTitle": "Gestilok",
+    "proofText": "A rental management SaaS designed and put into production. PHP, Laravel, JavaScript, VPS and CI/CD.",
+    "sectionsLabel": "Explore Talum",
+    "servicesTitle": "Services",
+    "projectsTitle": "Projects",
+    "adviceTitle": "Advice",
+    "estimateTitle": "Estimator",
+    "aboutTitle": "About",
+    "contactTitle": "Contact",
+    "sectionPlaceholder": "This section will be developed in the next project phase.",
+    "methodTitle": "A clear process",
+    "method": "Planning · Design · Delivery · Support",
+    "contactIntro": "Have a digital project? Let's talk."
+  },
+  "ServicesPage": {
+    "title": "Talum's expertise",
+    "intro": "A clear scope, concrete deliverables and one point of contact from concept to follow-up.",
+    "cta": "Discuss my project",
+    "placeholder": "This service detail will be completed with the final business scope and delivery list confirmed with the client."
+  },
+  "AboutPage": {
+    "title": "Talum, a practical and reliable approach",
+    "intro": "I design useful, maintainable digital solutions tailored to the realities of my clients.",
+    "story": "Based in Lille and Abidjan, I support SMEs, start-ups, schools and associations that need a serious point of contact capable of shaping, building and guiding a digital project without needless jargon.",
+    "methodTitle": "Method",
+    "methodText": "I start with the need, clarify the scope, choose the right architecture and lead implementation with clear, regular communication.",
+    "valuesTitle": "Values",
+    "values": ["Clarity before sophistication", "Controlled scope", "Useful and durable delivery"],
+    "zonesTitle": "Areas and working model",
+    "zones": [
+      "Lille and Abidjan",
+      "France and remote engagements",
+      "Support across the key phases: discovery, development, cloud, AI and follow-up"
+    ]
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Discuss my project",
+    "intro": "Describe your need, your context and your goals. I’ll come back with a clear first response.",
+    "summaryTitle": "A useful first conversation",
+    "summaryText": "Before launching a project, it is useful to clarify the context, the scope and the target outcome.",
+    "bulletOne": "Define the need and scope",
+    "bulletTwo": "Estimate the complexity level and timeline",
+    "bulletThree": "Get a clear recommendation on the right path",
+    "fields": {
+      "name": "Full name",
+      "email": "Email address",
+      "company": "Company / organisation",
+      "projectType": "Project type",
+      "message": "Describe your need"
+    },
+    "projectOptions": {
+      "site": "Marketing site",
+      "app": "Business application",
+      "platform": "Platform / SaaS",
+      "other": "Other"
+    },
+    "consent": "I agree that this message may be used to follow up on my request.",
+    "submit": "Send my request",
+    "submitting": "Sending…",
+    "success": "Thank you, your request has been received. I’ll respond soon.",
+    "errors": {
+      "name": "Your name is required.",
+      "nameShort": "The name is too short.",
+      "email": "An email address is required.",
+      "emailFormat": "The email address is not valid.",
+      "message": "A message is required.",
+      "messageShort": "The message is too short. Tell me a bit more about your need.",
+      "consent": "You must accept the checkbox before sending.",
+      "submit": "The message could not be sent. Please try again."
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "Legal notice",
+    "title": "Legal notice",
+    "intro": "Administrative information, responsibilities and terms of use for the Talum website.",
+    "identityTitle": "Site identity",
+    "identityText": "The Talum website is published by an independent entity and does not claim to represent a larger corporate group or a fully finalized legal structure. Official details such as the full address, SIRET, status and contact details remain to be validated before final production publication.",
+    "contactTitle": "Contact",
+    "contactText": "For any question or request, use the contact form on the site. Final public contact details and legal information must be confirmed before a production launch.",
+    "responsibilityTitle": "Responsibility",
+    "responsibilityText": "Talum makes every effort to provide accurate and up-to-date information but cannot guarantee that all content is free from omissions or errors. Website content is provided for information purposes only and may change at any time without notice."
+  },
+  "PrivacyPage": {
+    "eyebrow": "Privacy",
+    "title": "Privacy policy",
+    "intro": "The website only collects and processes information in the context of a commercial relationship and contact request.",
+    "dataTitle": "Data collected",
+    "dataText": "The information transmitted via the contact form includes at minimum the name, email address, company or organization, project type and message. These data are used only to respond to the request and to continue the discussion around the need expressed.",
+    "usageTitle": "Use of data",
+    "usageText": "Data is used to clarify the need, prepare a response or proposal and organize a useful exchange. It is not sold or disclosed to third parties except where strictly necessary for professional handling of the request.",
+    "rightsTitle": "Rights and updates",
+    "rightsText": "The data subject may request access, correction or deletion of their information, subject to applicable legal requirements. Final contact details and the exact personal-data handling process will be confirmed before production publication."
+  },
+  "ProjectsPage": {
+    "eyebrow": "Projects",
+    "title": "Useful tools, built for real-world needs.",
+    "intro": "Ticketing, jobs, delivery, real estate and education: digital products shaped around concrete workflows and business needs.",
+    "seeMore": "Visit project",
+    "filterLabel": "Filter projects by domain",
+    "stackLabel": "Project highlights",
+    "count": "{count, plural, =0 {No projects} one {# project} other {# projects}}",
+    "filters": {
+      "all": "View all",
+      "ticketing": "Ticketing",
+      "employment": "Jobs",
+      "logistics": "Logistics",
+      "realEstate": "Real estate",
+      "education": "Education"
+    }
+  },
+  "EstimatePage": {
+    "eyebrow": "Estimator",
+    "title": "Estimate your project",
+    "intro": "A first estimate to align scope, complexity and implementation timeline.",
+    "projectType": "Project type",
+    "types": {
+      "site": "Marketing site",
+      "app": "Business app",
+      "platform": "Platform / SaaS"
+    },
+    "scope": "Complexity level",
+    "scopeLevels": ["Simple", "Medium", "High", "Full"],
+    "urgency": "Urgency",
+    "urgencyLevels": ["Standard", "Comfort", "Priority"],
+    "addOns": "Options",
+    "aiAutomation": "AI automation",
+    "opsSetup": "Cloud / CI-CD setup",
+    "summaryTitle": "Reference budget",
+    "range": "Usually between {min} and {max}",
+    "deliverableOne": "Scope definition + architecture + delivery plan",
+    "deliverableTwo": "Functional deliverables, interface and checkpoints",
+    "delivery": "Estimated timeline: {schedule}",
+    "cta": "Need a more precise brief?",
+    "contact": "Discuss my project"
+  },
+  "Footer": {
+    "statement": "Digital project design and consulting.",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "copyright": "All rights reserved."
+  }
+}

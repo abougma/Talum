@@ -1,0 +1,169 @@
+{
+  "Metadata": {
+    "title": "Développement, cloud et IA pour vos projets",
+    "description": "Talum conçoit, développe et accompagne vos projets numériques, du cadrage à la mise en production."
+  },
+  "Navigation": {
+    "primary": "Principale",
+    "services": "Services",
+    "projects": "Réalisations",
+    "advice": "Conseil",
+    "about": "À propos",
+    "estimate": "Estimateur",
+    "contact": "Parler de mon projet",
+    "contactCta": "Parler de mon projet",
+    "menu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "switchToEnglish": "Read this site in English"
+  },
+  "HomePage": {
+    "eyebrow": "Talum · Lille & Abidjan",
+    "title": "Vos projets numériques, du cadrage à la mise en production.",
+    "intro": "Développement web et applicatif, cloud & DevOps, gestion de projet, intelligence artificielle et conseil technique. Un interlocuteur, de l’idée au suivi.",
+    "estimateCta": "Estimer mon projet",
+    "projectsCta": "Voir les réalisations",
+    "proofLabel": "Projet mis en production",
+    "proofTitle": "Gestilok",
+    "proofText": "SaaS de gestion locative conçu et mis en production. PHP, Laravel, JavaScript, VPS et CI/CD.",
+    "sectionsLabel": "Explorer Talum",
+    "servicesTitle": "Services",
+    "projectsTitle": "Réalisations",
+    "adviceTitle": "Conseil",
+    "estimateTitle": "Estimateur",
+    "aboutTitle": "À propos",
+    "contactTitle": "Contact",
+    "sectionPlaceholder": "Cette section sera détaillée dans la prochaine étape du projet.",
+    "methodTitle": "Une méthode claire",
+    "method": "Cadrage · Conception · Réalisation · Suivi",
+    "contactIntro": "Vous avez un projet numérique ? Parlons-en."
+  },
+  "ServicesPage": {
+    "title": "Les expertises de Talum",
+    "intro": "Un périmètre clair, des livrables concrets et un interlocuteur unique de l’idée au suivi.",
+    "cta": "Parler de mon projet",
+    "placeholder": "Les détails exacts de cette prestation seront complétés avec les éléments métier et les livrables validés par le client."
+  },
+  "AboutPage": {
+    "title": "Talum, une approche pragmatique et fiable",
+    "intro": "Je conçois des solutions numériques utiles, maintenables et adaptées à l’environnement de mes clients.",
+    "story": "À Lille et Abidjan, je soutiens les TPE/PME, start-ups, écoles et associations qui ont besoin d’un interlocuteur sérieux, capable de cadrer, construire et accompagner un projet numérique sans jargon inutile.",
+    "methodTitle": "Méthode",
+    "methodText": "Je commence par comprendre le besoin, clarifie le périmètre, choisit une architecture adaptée et pilote la mise en œuvre avec une communication simple et régulière.",
+    "valuesTitle": "Valeurs",
+    "values": ["Clarté avant sophistication", "Périmètre maîtrisé", "Livraison utile et durable"],
+    "zonesTitle": "Zones et modalités",
+    "zones": [
+      "Lille et Abidjan",
+      "France métropolitaine et interventions à distance",
+      "Accompagnement sur les phases clé : cadrage, développement, cloud, AI et suivi"
+    ]
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Parler de mon projet",
+    "intro": "Décrivez votre besoin, votre contexte et vos objectifs. Je reviendrai vers vous avec une première réponse claire.",
+    "summaryTitle": "Une première discussion utile",
+    "summaryText": "Avant de lancer un projet, il faut clarifier le contexte, le périmètre et les objectifs de résultat.",
+    "bulletOne": "Cadrage du besoin et définition du périmètre",
+    "bulletTwo": "Estimation du niveau de complexité et de la durée",
+    "bulletThree": "Première recommandation sur la bonne voie à suivre",
+    "fields": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "company": "Entreprise / organisation",
+      "projectType": "Type de projet",
+      "message": "Décrivez votre besoin"
+    },
+    "projectOptions": {
+      "site": "Site vitrine",
+      "app": "Application métier",
+      "platform": "Plateforme / SaaS",
+      "other": "Autre"
+    },
+    "consent": "J’accepte que ce message soit utilisé pour répondre à ma demande.",
+    "submit": "Envoyer ma demande",
+    "submitting": "Envoi en cours…",
+    "success": "Merci, votre demande a bien été reçue. Je vous répondrai rapidement.",
+    "errors": {
+      "name": "Le nom est requis.",
+      "nameShort": "Le nom est trop court.",
+      "email": "L’adresse e-mail est requise.",
+      "emailFormat": "L’adresse e-mail n’est pas valide.",
+      "message": "Le message est requis.",
+      "messageShort": "Le message est trop court. Dites-en un peu plus sur votre besoin.",
+      "consent": "Il faut cocher la case pour envoyer votre demande.",
+      "submit": "Le message n’a pas pu être envoyé. Merci de réessayer."
+    }
+  },
+  "LegalPage": {
+    "eyebrow": "Mentions légales",
+    "title": "Mentions légales",
+    "intro": "Informations administratives, responsabilités et conditions générales d’utilisation du site Talum.",
+    "identityTitle": "Identité du site",
+    "identityText": "Le site Talum est édité par une structure indépendante, sans rattachement à un grand groupe ou à une entité juridique non identifiée. Les détails officiels, l’adresse complète, le SIRET et les éventuels statuts juridiques restent à compléter selon les informations officielles du client ou de l’entité concernée.",
+    "contactTitle": "Contact",
+    "contactText": "Pour toute question ou demande, utilisez le formulaire de contact disponible sur le site. Les coordonnées définitives et les informations de contact publiques devront être validées avant mise en ligne de production.",
+    "responsibilityTitle": "Responsabilité",
+    "responsibilityText": "Talum met tout en œuvre pour fournir des informations fiables et à jour, sans toutefois garantir l’absence totale d’erreurs ou d’omissions. Les contenus du site sont proposés à titre informatif et peuvent être modifiés à tout moment sans préavis."
+  },
+  "PrivacyPage": {
+    "eyebrow": "Confidentialité",
+    "title": "Politique de confidentialité",
+    "intro": "Le site collecte et traite des informations uniquement dans le cadre de la relation commerciale et de la prise de contact.",
+    "dataTitle": "Données collectées",
+    "dataText": "Les informations transmises via le formulaire de contact incluent au minimum le nom, l’adresse e-mail, la société ou l’organisation, le type de projet et le message. Ces données sont utilisées uniquement pour répondre à la demande et échanger autour du besoin exprimé.",
+    "usageTitle": "Utilisation des données",
+    "usageText": "Les informations sont utilisées pour cadrer le besoin, préparer une réponse ou une proposition, puis pour organiser un échange utile. Elles ne sont pas revendues ni diffusées à des tiers sans nécessité professionnelle avérée.",
+    "rightsTitle": "Droits et mises à jour",
+    "rightsText": "Le titulaire des données peut demander à accéder, corriger ou supprimer ses informations, en fonction du cadre légal applicable. Les détails de contact complets et les éventuelles procédures de gestion des données seront renseignés officiellement avant publication dans un environnement de production."
+  },
+  "ProjectsPage": {
+    "eyebrow": "Réalisations",
+    "title": "Des outils utiles, pensés pour le terrain.",
+    "intro": "Billetterie, emploi, livraison, immobilier, éducation : des produits numériques conçus autour de parcours et de besoins métier concrets.",
+    "seeMore": "Visiter le projet",
+    "filterLabel": "Filtrer les réalisations par domaine",
+    "stackLabel": "Repères du projet",
+    "count": "{count, plural, =0 {Aucun projet} one {# projet} other {# projets}}",
+    "filters": {
+      "all": "Tout voir",
+      "ticketing": "Billetterie",
+      "employment": "Emploi",
+      "logistics": "Logistique",
+      "realEstate": "Immobilier",
+      "education": "Éducation"
+    }
+  },
+  "EstimatePage": {
+    "eyebrow": "Estimateur",
+    "title": "Estimez votre projet",
+    "intro": "Une première estimation pour cadrer le périmètre, le niveau d’exigence et la durée de mise en œuvre.",
+    "projectType": "Type de projet",
+    "types": {
+      "site": "Site vitrine",
+      "app": "Application métier",
+      "platform": "Plateforme / SaaS"
+    },
+    "scope": "Niveau de complexité",
+    "scopeLevels": ["Simple", "Moyen", "Élevé", "Complet"],
+    "urgency": "Urgence",
+    "urgencyLevels": ["Standard", "Confort", "Prioritaire"],
+    "addOns": "Options",
+    "aiAutomation": "Automatisation IA",
+    "opsSetup": "Accompagnement cloud / CI-CD",
+    "summaryTitle": "Budget de référence",
+    "range": "En général entre {min} et {max}",
+    "deliverableOne": "Cadrage + architecture + plan de mise en œuvre",
+    "deliverableTwo": "Livrables fonctionnels, interface et points de contrôle",
+    "delivery": "Délai estimé : {schedule}",
+    "cta": "Vous avez un besoin plus précis ?",
+    "contact": "Parler de mon projet"
+  },
+  "Footer": {
+    "statement": "Conception et accompagnement de projets numériques.",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "copyright": "Tous droits réservés."
+  }
+}

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { getProjects } from "@/data/projects";
+import { getFeaturedProjects } from "@/data/projects";
+import { getServices } from "@/data/services";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -22,21 +22,12 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <HomeContent locale={locale} />;
-}
-
-function HomeContent({ locale }: { locale: string }) {
-  const t = useTranslations("HomePage");
-  const tNavigation = useTranslations("Navigation");
-  const projects = getProjects(locale).slice(0, 3);
-
-  const sections = [
-    { id: "services", title: t("servicesTitle"), href: "/services" },
-    { id: "realisations", title: t("projectsTitle"), href: "/realisations" },
-    { id: "conseil", title: t("adviceTitle"), href: "/services" },
-    { id: "estimateur", title: t("estimateTitle"), href: "/estimate" },
-    { id: "a-propos", title: t("aboutTitle"), href: "/a-propos" },
-  ];
+  const t = await getTranslations({ locale, namespace: "HomePage" });
+  const tNavigation = await getTranslations({ locale, namespace: "Navigation" });
+  const services = getServices(locale);
+  const featuredProjects = getFeaturedProjects(locale);
+  const methodSteps = t.raw("methodSteps") as { title: string; text: string }[];
+  const proofProject = featuredProjects.find((project) => project.slug === "gestilok");
 
   return (
     <main id="main">
@@ -56,41 +47,120 @@ function HomeContent({ locale }: { locale: string }) {
         </div>
         <aside aria-label={t("proofLabel")} className="proof-panel">
           <p className="eyebrow">{t("proofLabel")}</p>
-          <h2>{t("proofTitle")}</h2>
+          <h2>{proofProject?.title ?? "Gestilok"}</h2>
           <p>{t("proofText")}</p>
+          <ul className="proof-facts">
+            <li>{t("proofFactOne")}</li>
+            <li>{t("proofFactTwo")}</li>
+            <li>{t("proofFactThree")}</li>
+          </ul>
         </aside>
       </section>
 
-      <section aria-labelledby="method-title" className="method-section page-container">
-        <p className="eyebrow">01 / {t("sectionsLabel")}</p>
-        <h2 id="method-title">{t("methodTitle")}</h2>
-        <p className="method-line">{t("method")}</p>
+      <section aria-labelledby="expertises-title" className="home-section page-container">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">01 / {t("expertisesLabel")}</p>
+            <h2 id="expertises-title">{t("expertisesTitle")}</h2>
+          </div>
+          <p className="section-intro">{t("expertisesIntro")}</p>
+        </div>
+        <ul className="expertise-grid">
+          {services.map((service) => (
+            <li key={service.slug}>
+              <Link className="expertise-card" href={`/services#${service.slug}`}>
+                <span className="expertise-number">{service.number}</span>
+                <h3>{service.title}</h3>
+                <p>{service.tagline}</p>
+                <span className="text-link">{t("serviceLink")}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
-      <section aria-labelledby="explore-title" className="explore-section page-container">
-        <p className="eyebrow">02 / TALUM</p>
-        <h2 id="explore-title">{t("sectionsLabel")}</h2>
-        <div className="section-grid">
-          {sections.map(({ id, title, href }) => {
-            const cardText =
-              id === "realisations"
-                ? projects.map((project) => project.title).join(" • ")
-                : t("sectionPlaceholder");
+      <section aria-labelledby="projects-title" className="home-section page-container">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">02 / {t("projectsLabel")}</p>
+            <h2 id="projects-title">{t("projectsTitle")}</h2>
+          </div>
+          <p className="section-intro">{t("projectsIntro")}</p>
+        </div>
+        <div className="featured-grid">
+          {featuredProjects.map((project) => {
+            const headlineResult = project.caseStudy.results[0];
 
             return (
-              <Link className="section-card" href={href} id={id} key={id}>
-                <p className="eyebrow">{id === "estimateur" ? "05" : "—"}</p>
-                <h3>{title}</h3>
-                <p>{cardText}</p>
-              </Link>
+              <article className="featured-project" key={project.slug}>
+                <p className="eyebrow">
+                  {project.client} · {project.year}
+                </p>
+                <h3>
+                  <Link href={`/realisations/${project.slug}`}>{project.title}</Link>
+                </h3>
+                <p>{project.summary}</p>
+                <dl className="metric">
+                  <dt>{t("projectResultLabel")}</dt>
+                  <dd>{headlineResult?.value ?? t("projectResultPending")}</dd>
+                </dl>
+                <Link className="text-link" href={`/realisations/${project.slug}`}>
+                  {t("projectLink")}
+                </Link>
+              </article>
             );
           })}
+        </div>
+        <p className="section-note">{t("resultsNote")}</p>
+      </section>
+
+      <section aria-labelledby="method-title" className="home-section page-container">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">03 / {t("methodLabel")}</p>
+            <h2 id="method-title">{t("methodTitle")}</h2>
+          </div>
+          <p className="section-intro">{t("methodIntro")}</p>
+        </div>
+        <ol className="method-steps">
+          {methodSteps.map((step, index) => (
+            <li key={step.title}>
+              <span className="step-number">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section aria-labelledby="paths-title" className="home-section page-container">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">04 / {t("pathsLabel")}</p>
+            <h2 id="paths-title">{t("pathsTitle")}</h2>
+          </div>
+        </div>
+        <div className="path-grid">
+          <article className="path-card">
+            <h3>{t("estimatePathTitle")}</h3>
+            <p>{t("estimatePathText")}</p>
+            <Link className="button button-primary" href="/estimate">
+              {t("estimatePathCta")}
+            </Link>
+          </article>
+          <article className="path-card">
+            <h3>{t("advicePathTitle")}</h3>
+            <p>{t("advicePathText")}</p>
+            <Link className="button button-secondary" href="/services#conseil">
+              {t("advicePathCta")}
+            </Link>
+          </article>
         </div>
       </section>
 
       <section aria-labelledby="contact-title" className="contact-band page-container" id="contact">
         <div>
-          <p className="eyebrow">03 / CONTACT</p>
+          <p className="eyebrow">05 / {t("contactLabel")}</p>
           <h2 id="contact-title">{t("contactIntro")}</h2>
         </div>
         <Link className="button button-primary" href="/contact">

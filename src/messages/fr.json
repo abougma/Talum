@@ -24,40 +24,161 @@
     "estimateCta": "Estimer mon projet",
     "projectsCta": "Voir les réalisations",
     "proofLabel": "Projet mis en production",
-    "proofTitle": "Gestilok",
-    "proofText": "SaaS de gestion locative conçu et mis en production. PHP, Laravel, JavaScript, VPS et CI/CD.",
-    "sectionsLabel": "Explorer Talum",
-    "servicesTitle": "Services",
-    "projectsTitle": "Réalisations",
-    "adviceTitle": "Conseil",
-    "estimateTitle": "Estimateur",
-    "aboutTitle": "À propos",
-    "contactTitle": "Contact",
-    "sectionPlaceholder": "Cette section sera détaillée dans la prochaine étape du projet.",
-    "methodTitle": "Une méthode claire",
-    "method": "Cadrage · Conception · Réalisation · Suivi",
+    "proofText": "SaaS de gestion locative conçu et mis en production, avec des utilisateurs réels. PHP/Laravel, JavaScript, VPS et CI/CD.",
+    "proofFactOne": "Conçu, développé et déployé",
+    "proofFactTwo": "Utilisateurs réels en production",
+    "proofFactThree": "Chaîne CI/CD sur VPS",
+    "expertisesLabel": "Expertises",
+    "expertisesTitle": "Cinq façons d’intervenir sur votre projet.",
+    "expertisesIntro": "Chaque expertise a un périmètre, des livrables et un profil de client identifiés. Elles se combinent selon le besoin.",
+    "serviceLink": "Voir le détail",
+    "projectsLabel": "Réalisations",
+    "projectsTitle": "Des outils utiles, pensés pour le terrain.",
+    "projectsIntro": "Trois projets pour montrer la façon de travailler : un contexte, des choix techniques et des résultats à mesurer.",
+    "projectResultLabel": "Résultat",
+    "projectResultPending": "[À COMPLÉTER]",
+    "projectLink": "Lire l’étude de cas",
+    "resultsNote": "Les résultats chiffrés sont publiés uniquement lorsqu’ils sont mesurés et validés par le client. Les mentions [À COMPLÉTER] seront renseignées avant la mise en ligne.",
+    "methodLabel": "Méthode",
+    "methodTitle": "Quatre étapes, sans zone d’ombre.",
+    "methodIntro": "La méthode est simple mais tenue : écrire le besoin, rendre les choix explicites, livrer par lots et assurer la suite.",
+    "methodSteps": [
+      {
+        "title": "Cadrage",
+        "text": "Comprendre le besoin, les contraintes et le résultat attendu. Le périmètre et les critères de réussite sont écrits."
+      },
+      {
+        "title": "Conception",
+        "text": "Choisir l’architecture, les outils et le découpage. Les risques et les arbitrages sont explicites."
+      },
+      {
+        "title": "Réalisation",
+        "text": "Construire par lots livrables, avec des points de contrôle réguliers et des tests sur les parcours critiques."
+      },
+      {
+        "title": "Suivi",
+        "text": "Mettre en production, documenter, transmettre et ajuster. Le projet reste maintenable après la livraison."
+      }
+    ],
+    "pathsLabel": "Deux points de départ",
+    "pathsTitle": "Vous savez déjà, ou pas encore.",
+    "estimatePathTitle": "Chiffrer un périmètre",
+    "estimatePathText": "Vous avez une idée claire de ce que vous voulez construire et besoin d’une fourchette pour décider.",
+    "estimatePathCta": "Ouvrir l’estimateur",
+    "advicePathTitle": "Clarifier l’approche",
+    "advicePathText": "Le besoin est encore flou. Quelques questions suffisent pour identifier la bonne approche et les risques.",
+    "advicePathCta": "Voir le conseil",
+    "contactLabel": "Contact",
     "contactIntro": "Vous avez un projet numérique ? Parlons-en."
   },
   "ServicesPage": {
+    "eyebrow": "Services",
     "title": "Les expertises de Talum",
-    "intro": "Un périmètre clair, des livrables concrets et un interlocuteur unique de l’idée au suivi.",
-    "cta": "Parler de mon projet",
-    "placeholder": "Les détails exacts de cette prestation seront complétés avec les éléments métier et les livrables validés par le client."
+    "description": "Cinq expertises : développement web et applicatif, cloud & DevOps, gestion de projet, IA et conseil technique.",
+    "intro": "Un périmètre clair, des livrables concrets et un interlocuteur unique de l’idée au suivi. Chaque expertise peut être mobilisée seule ou combinée aux autres.",
+    "summaryLabel": "Sommaire",
+    "audienceLabel": "À qui cela s’adresse",
+    "deliverablesLabel": "Livrables types",
+    "technologiesLabel": "Technologies",
+    "serviceCta": "Estimer cette prestation",
+    "ctaLabel": "Appel à l’action",
+    "cta": "Un besoin qui traverse plusieurs expertises ?",
+    "estimateCta": "Estimer mon projet",
+    "contactCta": "Parler de mon projet"
+  },
+  "ProjectsPage": {
+    "eyebrow": "Réalisations",
+    "title": "Des outils utiles, pensés pour le terrain.",
+    "description": "Études de cas Talum : contexte, problème, solution, stack, résultats et apprentissages.",
+    "intro": "Billetterie, emploi, logistique, immobilier, éducation : des produits numériques conçus autour de parcours et de besoins métier concrets.",
+    "resultLabel": "Résultat",
+    "seeMore": "Visiter le projet",
+    "caseStudyLink": "Lire l’étude de cas",
+    "filterLabel": "Filtrer les réalisations par expertise",
+    "stackLabel": "Stack",
+    "empty": "Aucune réalisation pour cette expertise.",
+    "reset": "Afficher toutes les réalisations",
+    "count": "{count, plural, =0 {Aucune réalisation} one {# réalisation} other {# réalisations}}",
+    "filters": {
+      "all": "Toutes",
+      "developpement": "Développement",
+      "cloud-devops": "Cloud & DevOps",
+      "gestion-de-projet": "Gestion de projet",
+      "ia": "IA",
+      "conseil": "Conseil"
+    }
+  },
+  "CaseStudyPage": {
+    "eyebrow": "Étude de cas",
+    "breadcrumbLabel": "Fil d’Ariane",
+    "breadcrumbHome": "Accueil",
+    "metaClient": "Client",
+    "metaYear": "Année",
+    "metaRole": "Rôle",
+    "metaExpertises": "Expertises",
+    "contextTitle": "Contexte",
+    "problemTitle": "Problème",
+    "solutionTitle": "Solution",
+    "resultsTitle": "Résultats",
+    "learningsTitle": "Ce que j’en ai appris",
+    "stackTitle": "Stack",
+    "pendingNote": "Les valeurs marquées [À COMPLÉTER] seront documentées avec le client avant publication.",
+    "visitProject": "Voir le projet",
+    "ctaTitle": "Votre contexte est proche ?",
+    "ctaText": "Décrivez votre besoin : je vous dirai ce qui se transpose, ce qui change et par où commencer.",
+    "contactCta": "Parler de mon projet",
+    "backToProjects": "Retour aux réalisations"
   },
   "AboutPage": {
-    "title": "Talum, une approche pragmatique et fiable",
+    "eyebrow": "À propos",
+    "title": "Talum, une approche pragmatique et fiable.",
+    "description": "Parcours, valeurs et méthode de travail d’Armel BOUGMA, fondateur de Talum, à Lille et Abidjan.",
     "intro": "Je conçois des solutions numériques utiles, maintenables et adaptées à l’environnement de mes clients.",
+    "founderLabel": "Fondateur",
+    "founderName": "Armel BOUGMA",
+    "founderRole": "Lead developer et chef de projet · Lille & Abidjan",
+    "storyTitle": "Pourquoi Talum",
     "story": "À Lille et Abidjan, je soutiens les TPE/PME, start-ups, écoles et associations qui ont besoin d’un interlocuteur sérieux, capable de cadrer, construire et accompagner un projet numérique sans jargon inutile.",
-    "methodTitle": "Méthode",
-    "methodText": "Je commence par comprendre le besoin, clarifie le périmètre, choisit une architecture adaptée et pilote la mise en œuvre avec une communication simple et régulière.",
+    "storySecond": "Le travail part toujours du besoin réel : comprendre le métier, écrire le périmètre, choisir une architecture proportionnée et livrer quelque chose qui sert. Le reste — la technique, les outils, la méthode — est au service de ce résultat.",
     "valuesTitle": "Valeurs",
-    "values": ["Clarté avant sophistication", "Périmètre maîtrisé", "Livraison utile et durable"],
+    "values": [
+      "Clarté avant sophistication",
+      "Périmètre maîtrisé et décisions explicites",
+      "Livraison utile, documentée et durable"
+    ],
     "zonesTitle": "Zones et modalités",
     "zones": [
       "Lille et Abidjan",
       "France métropolitaine et interventions à distance",
-      "Accompagnement sur les phases clé : cadrage, développement, cloud, AI et suivi"
-    ]
+      "Accompagnement sur les phases clés : cadrage, développement, cloud, IA et suivi"
+    ],
+    "methodLabel": "Façon de travailler",
+    "methodTitle": "La même méthode, quel que soit le projet.",
+    "methodIntro": "Elle sert à réduire les malentendus et à rendre les décisions visibles, pas à ajouter de la procédure.",
+    "methodSteps": [
+      {
+        "title": "Cadrage",
+        "text": "Comprendre le besoin et les contraintes. Écrire le périmètre, les objectifs et les critères de réussite."
+      },
+      {
+        "title": "Conception",
+        "text": "Choisir l’architecture et le découpage. Rendre explicites les risques, les coûts et les arbitrages."
+      },
+      {
+        "title": "Réalisation",
+        "text": "Livrer par lots, avec des points de contrôle et des tests sur les parcours critiques."
+      },
+      {
+        "title": "Suivi",
+        "text": "Mettre en production, documenter, transmettre et ajuster dans la durée."
+      }
+    ],
+    "certificationsTitle": "Certifications et formations",
+    "certificationsText": "Cette section ne publiera que des certifications vérifiables. Aucune ne sera affichée tant qu’elle n’aura pas été fournie et contrôlée.",
+    "ctaLabel": "Contact",
+    "cta": "Parlons de votre projet.",
+    "contactCta": "Parler de mon projet",
+    "projectsCta": "Voir les réalisations"
   },
   "ContactPage": {
     "eyebrow": "Contact",
@@ -100,40 +221,23 @@
     "eyebrow": "Mentions légales",
     "title": "Mentions légales",
     "intro": "Informations administratives, responsabilités et conditions générales d’utilisation du site Talum.",
-    "identityTitle": "Identité du site",
-    "identityText": "Le site Talum est édité par une structure indépendante, sans rattachement à un grand groupe ou à une entité juridique non identifiée. Les détails officiels, l’adresse complète, le SIRET et les éventuels statuts juridiques restent à compléter selon les informations officielles du client ou de l’entité concernée.",
+    "identityTitle": "Éditeur du site",
+    "identityText": "Le site Talum est édité par une structure indépendante. Les informations officielles — statut juridique, SIRET, adresse du siège, TVA et directeur de publication — restent à compléter avant la mise en ligne.",
     "contactTitle": "Contact",
-    "contactText": "Pour toute question ou demande, utilisez le formulaire de contact disponible sur le site. Les coordonnées définitives et les informations de contact publiques devront être validées avant mise en ligne de production.",
+    "contactText": "Pour toute question ou demande, utilisez le formulaire de contact disponible sur le site. Les coordonnées définitives devront être validées avant la mise en production.",
     "responsibilityTitle": "Responsabilité",
-    "responsibilityText": "Talum met tout en œuvre pour fournir des informations fiables et à jour, sans toutefois garantir l’absence totale d’erreurs ou d’omissions. Les contenus du site sont proposés à titre informatif et peuvent être modifiés à tout moment sans préavis."
+    "responsibilityText": "Talum met tout en œuvre pour fournir des informations fiables et à jour, sans toutefois garantir l’absence totale d’erreurs ou d’omissions. Les contenus sont proposés à titre informatif et peuvent être modifiés à tout moment."
   },
   "PrivacyPage": {
     "eyebrow": "Confidentialité",
     "title": "Politique de confidentialité",
     "intro": "Le site collecte et traite des informations uniquement dans le cadre de la relation commerciale et de la prise de contact.",
     "dataTitle": "Données collectées",
-    "dataText": "Les informations transmises via le formulaire de contact incluent au minimum le nom, l’adresse e-mail, la société ou l’organisation, le type de projet et le message. Ces données sont utilisées uniquement pour répondre à la demande et échanger autour du besoin exprimé.",
+    "dataText": "Les informations transmises via le formulaire de contact incluent le nom, l’adresse e-mail, la société ou l’organisation, le type de projet et le message. Ces données servent uniquement à répondre à la demande.",
     "usageTitle": "Utilisation des données",
-    "usageText": "Les informations sont utilisées pour cadrer le besoin, préparer une réponse ou une proposition, puis pour organiser un échange utile. Elles ne sont pas revendues ni diffusées à des tiers sans nécessité professionnelle avérée.",
-    "rightsTitle": "Droits et mises à jour",
-    "rightsText": "Le titulaire des données peut demander à accéder, corriger ou supprimer ses informations, en fonction du cadre légal applicable. Les détails de contact complets et les éventuelles procédures de gestion des données seront renseignés officiellement avant publication dans un environnement de production."
-  },
-  "ProjectsPage": {
-    "eyebrow": "Réalisations",
-    "title": "Des outils utiles, pensés pour le terrain.",
-    "intro": "Billetterie, emploi, livraison, immobilier, éducation : des produits numériques conçus autour de parcours et de besoins métier concrets.",
-    "seeMore": "Visiter le projet",
-    "filterLabel": "Filtrer les réalisations par domaine",
-    "stackLabel": "Repères du projet",
-    "count": "{count, plural, =0 {Aucun projet} one {# projet} other {# projets}}",
-    "filters": {
-      "all": "Tout voir",
-      "ticketing": "Billetterie",
-      "employment": "Emploi",
-      "logistics": "Logistique",
-      "realEstate": "Immobilier",
-      "education": "Éducation"
-    }
+    "usageText": "Les informations sont utilisées pour cadrer le besoin, préparer une réponse ou une proposition, puis organiser un échange. Elles ne sont pas revendues ni diffusées à des tiers sans nécessité professionnelle.",
+    "rightsTitle": "Droits et conservation",
+    "rightsText": "Le titulaire des données peut demander à accéder, corriger ou supprimer ses informations. Les durées de conservation, les sous-traitants et les modalités de contact RGPD restent à compléter avant la mise en production."
   },
   "EstimatePage": {
     "eyebrow": "Estimateur",

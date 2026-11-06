@@ -3,19 +3,20 @@
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { useState } from "react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { ThemeToggle } from "./theme-toggle";
 
 const navigationItems = [
   { key: "services", href: "/services" },
   { key: "projects", href: "/realisations" },
-  { key: "advice", href: "/#conseil" },
+  { key: "advice", href: "/services#conseil" },
   { key: "about", href: "/a-propos" },
 ] as const;
 
 export function SiteHeader() {
   const t = useTranslations("Navigation");
   const locale = useLocale();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const otherLocale = locale === "fr" ? "en" : "fr";
 
@@ -60,7 +61,7 @@ export function SiteHeader() {
           <Link
             aria-label={t("switchToEnglish")}
             className="locale-link"
-            href="/"
+            href={pathname}
             locale={otherLocale}
             onClick={closeMenu}
           >

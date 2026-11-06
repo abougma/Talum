@@ -1,79 +1,110 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Services",
-    description: "Expertises de Talum : développement, cloud, gestion de projet, IA et conseil.",
-  };
-}
+import { getServices } from "@/data/services";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ServicesPage" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
 export default async function ServicesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "ServicesPage" });
-
-  const services = [
-    {
-      id: "developpement",
-      title: "Développement web et applicatif",
-      description:
-        "Conception de l’interface, structuration de l’architecture, respect du périmètre fonctionnel et livrables maintenables. La solution est pensée pour évoluer sans perdre en lisibilité ni en fiabilité.",
-    },
-    {
-      id: "cloud",
-      title: "Cloud & DevOps",
-      description:
-        "Mise en place du socle technique, CI/CD, environnement de production, sécurité et supervision. Le but est d’obtenir une base stable, documentée et facile à faire évoluer.",
-    },
-    {
-      id: "gestion",
-      title: "Gestion de projet",
-      description:
-        "Cadrage, priorisation, coordination, suivi des tâches et communication régulière. La gestion de projet sert à sécuriser la décision, limiter le besoin de rework et rendre les avancées visibles.",
-    },
-    {
-      id: "ia",
-      title: "IA et automatisation",
-      description:
-        "Cartographie des besoins d’automatisation, workflows documentés, assistance IA et intégrations ciblées. Les usages sont définis pour gagner du temps sans introduire de dépendance fragile.",
-    },
-    {
-      id: "conseil",
-      title: "Conseil et audit technique",
-      description:
-        "Diagnostic du système existant, recommandations de structure, revue des risques et identification des choix à privilégier. L’objectif est de clarifier la bonne direction avant d’investir dans la mise en œuvre.",
-    },
-  ];
+  const services = getServices(locale);
 
   return (
     <main id="main" className="page-container content-page">
       <header className="page-header">
-        <p className="eyebrow">01 / SERVICES</p>
+        <p className="eyebrow">01 / {t("eyebrow")}</p>
         <h1>{t("title")}</h1>
         <p className="lead">{t("intro")}</p>
       </header>
 
-      <section aria-label="Expertises" className="stack-list">
-        {services.map(({ id, title, description }) => (
-          <article className="info-card" id={id} key={id}>
-            <p className="eyebrow">{id}</p>
-            <h2>{title}</h2>
-            <p>{description}</p>
-          </article>
-        ))}
-      </section>
+      <nav aria-label={t("summaryLabel")} className="anchor-nav">
+        <p className="eyebrow">{t("summaryLabel")}</p>
+        <ul>
+          {services.map((service) => (
+            <li key={service.slug}>
+              <a href={`#${service.slug}`}>
+                <span>{service.number}</span>
+                {service.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-      <section aria-label="Appel à l’action" className="cta-band">
+      <div className="service-list">
+        {services.map((service) => (
+          <section
+            aria-labelledby={`${service.slug}-title`}
+            className="service-section"
+            id={service.slug}
+            key={service.slug}
+          >
+            <div className="service-heading">
+              <p className="eyebrow">{service.number}</p>
+              <h2 id={`${service.slug}-title`}>{service.title}</h2>
+              <p className="service-tagline">{service.tagline}</p>
+              <p>{service.description}</p>
+            </div>
+
+            <div className="service-details">
+              <div>
+                <h3>{t("audienceLabel")}</h3>
+                <ul className="bullet-list">
+                  {service.audience.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3>{t("deliverablesLabel")}</h3>
+                <ul className="bullet-list">
+                  {service.deliverables.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3>{t("technologiesLabel")}</h3>
+                <ul className="tag-list">
+                  {service.technologies.map((item) => (
+                    <li className="tag" key={item}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link className="text-link" href="/estimate">
+                {t("serviceCta")}
+              </Link>
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <section aria-label={t("ctaLabel")} className="cta-band">
         <h2>{t("cta")}</h2>
-        <Link className="button button-primary" href="/contact">
-          {t("cta")}
-        </Link>
+        <div className="cta-actions">
+          <Link className="button button-primary" href="/estimate">
+            {t("estimateCta")}
+          </Link>
+          <Link className="button button-secondary" href="/contact">
+            {t("contactCta")}
+          </Link>
+        </div>
       </section>
     </main>
   );

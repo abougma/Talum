@@ -262,7 +262,22 @@
     "deliverableTwo": "Functional deliverables, interface and checkpoints",
     "delivery": "Estimated timeline: {schedule}",
     "cta": "Need something more specific?",
-    "contact": "Talk about my project"
+    "contact": "Talk about my project",
+    "pendingLabel": "Estimator in preparation",
+    "pendingTitle": "Pricing will be published after validation.",
+    "pendingText": "The calculation engine is ready and tested. Daily rates, coefficients and the VAT regime still need to be provided and approved by Talum: no priced estimate is shown until then.",
+    "pendingItemOne": "Pure, tested and traceable engine",
+    "pendingItemTwo": "No invented prices or default values",
+    "pendingItemThree": "Range, VAT and PDF once pricing is validated",
+    "pendingSummaryTitle": "In the meantime",
+    "pendingSummaryText": "Describe your need through the form: a human answer can be provided without an automatic estimate.",
+    "pendingNote": "Indicative, non-binding estimate.",
+    "readyTitle": "Your estimate",
+    "readyText": "This range is calculated from validated pricing and the assumptions shown.",
+    "vatLabel": "VAT",
+    "totalTtcLabel": "Total incl. VAT",
+    "durationLabel": "Indicative duration",
+    "weeks": "{min} to {max} weeks"
   },
   "Footer": {
     "statement": "Design and support for digital projects.",

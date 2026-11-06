@@ -262,7 +262,22 @@
     "deliverableTwo": "Livrables fonctionnels, interface et points de contrôle",
     "delivery": "Délai estimé : {schedule}",
     "cta": "Vous avez un besoin plus précis ?",
-    "contact": "Parler de mon projet"
+    "contact": "Parler de mon projet",
+    "pendingLabel": "Estimateur en préparation",
+    "pendingTitle": "Les tarifs seront publiés après validation.",
+    "pendingText": "Le moteur de calcul est prêt et testé. Les taux journaliers, les coefficients et le régime de TVA doivent encore être fournis et validés par Talum : aucune estimation chiffrée n’est affichée tant que ce n’est pas fait.",
+    "pendingItemOne": "Moteur pur, testé et traçable",
+    "pendingItemTwo": "Aucun tarif inventé ni valeur par défaut",
+    "pendingItemThree": "Fourchette, TVA et PDF dès validation des tarifs",
+    "pendingSummaryTitle": "En attendant",
+    "pendingSummaryText": "Décrivez votre besoin via le formulaire : une réponse humaine peut être apportée sans estimation automatique.",
+    "pendingNote": "Estimation indicative non contractuelle.",
+    "readyTitle": "Votre estimation",
+    "readyText": "Cette fourchette est calculée à partir des tarifs validés et des hypothèses affichées.",
+    "vatLabel": "TVA",
+    "totalTtcLabel": "Total TTC",
+    "durationLabel": "Durée indicative",
+    "weeks": "{min} à {max} semaines"
   },
   "Footer": {
     "statement": "Conception et accompagnement de projets numériques.",

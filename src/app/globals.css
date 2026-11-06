@@ -1864,3 +1864,9 @@ input[type="range"] {
     gap: 0.25rem;
   }
 }
+
+/* Estimateur — état en attente de configuration */
+.estimate-pending {
+  align-content: start;
+  gap: 1rem;
+}

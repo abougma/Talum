@@ -1,136 +1,95 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Link } from "@/i18n/navigation";
+import { pricingConfig } from "@/lib/pricing/config";
+import { computeEstimate } from "@/lib/pricing/engine";
 
-const projectOptions = {
-  site: { base: 2600 },
-  app: { base: 4200 },
-  platform: { base: 6300 },
-} as const;
-
-type ProjectKey = keyof typeof projectOptions;
-
+/**
+ * Consommateur minimal du moteur de calcul.
+ *
+ * Tant que la configuration publique contient des `null`, le moteur renvoie
+ * `pending-config` et aucun prix n’est affiché. Le parcours complet en étapes
+ * et le PDF sont ajoutés en phase 6.
+ */
 export function EstimateWidget() {
   const t = useTranslations("EstimatePage");
   const locale = useLocale();
-  const [projectType, setProjectType] = useState<ProjectKey>("site");
-  const [scope, setScope] = useState(2);
-  const [urgency, setUrgency] = useState(1);
-  const [aiAutomation, setAiAutomation] = useState(false);
-  const [opsSetup, setOpsSetup] = useState(false);
+  const estimate = useMemo(
+    () =>
+      computeEstimate(pricingConfig, {
+        service: "web",
+        features: [],
+        constraints: [],
+        complexity: "standard",
+        urgency: "standard",
+      }),
+    [],
+  );
 
-  const estimate = useMemo(() => {
-    const base = projectOptions[projectType].base;
-    const scopeFactors = [1, 1.35, 1.8, 2.4];
-    const urgencyFactors = [1, 1.15, 1.35];
-    const addOns = (aiAutomation ? 1300 : 0) + (opsSetup ? 950 : 0);
-    const value = Math.round((base * scopeFactors[scope] * urgencyFactors[urgency] + addOns) / 50) * 50;
-    const minimum = Math.round((value * 0.85) / 50) * 50;
-    const maximum = Math.round((value * 1.15) / 50) * 50;
-    const schedule = ["2-4 semaines", "4-6 semaines", "6-10 semaines", "10-14 semaines"][scope];
+  if (estimate.status === "pending-config") {
+    return (
+      <section aria-labelledby="estimate-pending-title" className="estimate-panel">
+        <div className="estimate-grid">
+          <div className="estimate-card estimate-pending">
+            <p className="eyebrow">{t("pendingLabel")}</p>
+            <h2 id="estimate-pending-title">{t("pendingTitle")}</h2>
+            <p>{t("pendingText")}</p>
+            <ul className="bullet-list">
+              <li>{t("pendingItemOne")}</li>
+              <li>{t("pendingItemTwo")}</li>
+              <li>{t("pendingItemThree")}</li>
+            </ul>
+            <Link className="button button-primary" href="/contact">
+              {t("contact")}
+            </Link>
+          </div>
 
-    return {
-      value,
-      minimum,
-      maximum,
-      schedule,
-    };
-  }, [aiAutomation, opsSetup, projectType, scope, urgency]);
+          <aside className="estimate-summary">
+            <p className="eyebrow">{t("pendingSummaryTitle")}</p>
+            <p>{t("pendingSummaryText")}</p>
+            <p className="section-note">{t("pendingNote")}</p>
+          </aside>
+        </div>
+      </section>
+    );
+  }
 
-  const numberFormatter = new Intl.NumberFormat(locale === "fr" ? "fr-FR" : "en-US");
+  const formatter = new Intl.NumberFormat(locale === "fr" ? "fr-FR" : "en-US", {
+    style: "currency",
+    currency: estimate.currency,
+    maximumFractionDigits: 0,
+  });
+  const formatMoney = (value: number | null) => (value === null ? "—" : formatter.format(value));
+  const duration = estimate.durationWeeks;
 
   return (
-    <section className="estimate-panel">
+    <section aria-labelledby="estimate-ready-title" className="estimate-panel">
       <div className="estimate-grid">
-        <div className="estimate-form">
-          <div className="estimate-card">
-            <h2>{t("projectType")}</h2>
-            <div className="toggle-grid">
-              {Object.entries(projectOptions).map(([key, option]) => {
-                const typedKey = key as ProjectKey;
-                const isSelected = projectType === typedKey;
-
-                return (
-                  <button
-                    key={key}
-                    className={isSelected ? "option-button is-selected" : "option-button"}
-                    onClick={() => setProjectType(typedKey)}
-                    type="button"
-                  >
-                    <span>{t(`types.${key}`)}</span>
-                    <small>{numberFormatter.format(option.base)} €</small>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="estimate-card">
-            <div className="range-header">
-              <h2>{t("scope")}</h2>
-              <span>{t(`scopeLevels.${scope}`)}</span>
-            </div>
-            <input
-              aria-label={t("scope")}
-              max={3}
-              min={0}
-              onChange={(event) => setScope(Number(event.target.value))}
-              step={1}
-              type="range"
-              value={scope}
-            />
-            <div className="range-scale">
-              <span>{t("scopeLevels.0")}</span>
-              <span>{t("scopeLevels.3")}</span>
-            </div>
-          </div>
-
-          <div className="estimate-card">
-            <div className="range-header">
-              <h2>{t("urgency")}</h2>
-              <span>{t(`urgencyLevels.${urgency}`)}</span>
-            </div>
-            <input
-              aria-label={t("urgency")}
-              max={2}
-              min={0}
-              onChange={(event) => setUrgency(Number(event.target.value))}
-              step={1}
-              type="range"
-              value={urgency}
-            />
-            <div className="range-scale">
-              <span>{t("urgencyLevels.0")}</span>
-              <span>{t("urgencyLevels.2")}</span>
-            </div>
-          </div>
-
-          <div className="estimate-card">
-            <h2>{t("addOns")}</h2>
-            <label className="check-row">
-              <input checked={aiAutomation} onChange={() => setAiAutomation((current) => !current)} type="checkbox" />
-              <span>{t("aiAutomation")}</span>
-            </label>
-            <label className="check-row">
-              <input checked={opsSetup} onChange={() => setOpsSetup((current) => !current)} type="checkbox" />
-              <span>{t("opsSetup")}</span>
-            </label>
-          </div>
+        <div className="estimate-card">
+          <p className="eyebrow">{t("summaryTitle")}</p>
+          <h2 id="estimate-ready-title">{t("readyTitle")}</h2>
+          <p>{t("readyText")}</p>
         </div>
 
         <aside className="estimate-summary">
           <p className="eyebrow">{t("summaryTitle")}</p>
-          <div className="estimate-price">{numberFormatter.format(estimate.value)} €</div>
+          <div className="estimate-price">{formatMoney(estimate.totalHT)}</div>
           <p className="estimate-range">
-            {t("range", { min: numberFormatter.format(estimate.minimum), max: numberFormatter.format(estimate.maximum) })}
+            {t("range", {
+              min: formatMoney(estimate.rangeHT?.min ?? null),
+              max: formatMoney(estimate.rangeHT?.max ?? null),
+            })}
           </p>
-          <ul className="bullet-list">
-            <li>{t("deliverableOne")}</li>
-            <li>{t("deliverableTwo")}</li>
-            <li>{t("delivery", { schedule: estimate.schedule })}</li>
-          </ul>
+          <dl className="metric">
+            <dt>{t("vatLabel")}</dt>
+            <dd>{formatMoney(estimate.vat.amount)}</dd>
+            <dt>{t("totalTtcLabel")}</dt>
+            <dd>{formatMoney(estimate.totalTTC)}</dd>
+            <dt>{t("durationLabel")}</dt>
+            <dd>{duration ? t("weeks", { min: duration.min, max: duration.max }) : "—"}</dd>
+          </dl>
           <Link className="button button-primary" href="/contact">
             {t("contact")}
           </Link>

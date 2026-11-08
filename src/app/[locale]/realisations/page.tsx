@@ -6,7 +6,7 @@ import { getProjects } from "@/data/projects";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Réalisations",
-    description: "Quelques projets et livrables réalisés par Talum.",
+    description: "Quelques projets et livrables réalisés par Taloom.",
   };
 }
 

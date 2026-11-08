@@ -9,9 +9,12 @@ import { computeEstimate } from "@/lib/pricing/engine";
 /**
  * Consommateur minimal du moteur de calcul.
  *
- * Tant que la configuration publique contient des `null`, le moteur renvoie
- * `pending-config` et aucun prix n’est affiché. Le parcours complet en étapes
- * et le PDF sont ajoutés en phase 6.
+ * - `pending-config` : aucune valeur HT complète, aucun prix affiché.
+ * - `ready-ht` : grille HT complète mais TVA non validée. On affiche le HT et
+ *   la fourchette HT, jamais la TVA ni le TTC.
+ * - `ready` : TVA configurée, TTC disponible.
+ *
+ * Le parcours complet en étapes et le PDF restent en phase 6.
  */
 export function EstimateWidget() {
   const t = useTranslations("EstimatePage");
@@ -63,19 +66,24 @@ export function EstimateWidget() {
   });
   const formatMoney = (value: number | null) => (value === null ? "—" : formatter.format(value));
   const duration = estimate.durationWeeks;
+  const vatPending = estimate.status === "ready-ht";
 
   return (
     <section aria-labelledby="estimate-ready-title" className="estimate-panel">
       <div className="estimate-grid">
         <div className="estimate-card">
-          <p className="eyebrow">{t("summaryTitle")}</p>
+          <p className="eyebrow">{t("exampleLabel")}</p>
           <h2 id="estimate-ready-title">{t("readyTitle")}</h2>
-          <p>{t("readyText")}</p>
+          <p>{vatPending ? t("proposalText") : t("readyText")}</p>
+          <p className="section-note">{t("exampleNote")}</p>
         </div>
 
         <aside className="estimate-summary">
           <p className="eyebrow">{t("summaryTitle")}</p>
-          <div className="estimate-price">{formatMoney(estimate.totalHT)}</div>
+          <div className="estimate-price">
+            {formatMoney(estimate.totalHT)}
+            <span className="estimate-price-unit">{t("htLabel")}</span>
+          </div>
           <p className="estimate-range">
             {t("range", {
               min: formatMoney(estimate.rangeHT?.min ?? null),
@@ -84,12 +92,23 @@ export function EstimateWidget() {
           </p>
           <dl className="metric">
             <dt>{t("vatLabel")}</dt>
-            <dd>{formatMoney(estimate.vat.amount)}</dd>
-            <dt>{t("totalTtcLabel")}</dt>
-            <dd>{formatMoney(estimate.totalTTC)}</dd>
+            <dd>{vatPending ? t("vatPending") : formatMoney(estimate.vat.amount)}</dd>
+            {!vatPending && (
+              <>
+                <dt>{t("totalTtcLabel")}</dt>
+                <dd>{formatMoney(estimate.totalTTC)}</dd>
+              </>
+            )}
             <dt>{t("durationLabel")}</dt>
-            <dd>{duration ? t("weeks", { min: duration.min, max: duration.max }) : "—"}</dd>
+            <dd>
+              {duration
+                ? duration.min === duration.max
+                  ? t("weeksSingle", { weeks: duration.min })
+                  : t("weeks", { min: duration.min, max: duration.max })
+                : "—"}
+            </dd>
           </dl>
+          {vatPending && <p className="section-note">{t("htOnlyNote")}</p>}
           <Link className="button button-primary" href="/contact">
             {t("contact")}
           </Link>

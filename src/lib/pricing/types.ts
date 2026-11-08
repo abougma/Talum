@@ -28,6 +28,7 @@ export type UrgencyLevel = (typeof URGENCY_LEVELS)[number];
 export const CONSTRAINT_IDS = [
   "securite",
   "conformite",
+  "conformite-ia",
   "integration-existant",
   "hebergement",
   "maintenance",
@@ -156,8 +157,15 @@ export type PricingDuration = {
   max: number;
 };
 
+/**
+ * `ready` : HT, TVA et TTC calculés.
+ * `ready-ht` : HT complet, mais TVA non configurée (totaux TTC indisponibles).
+ * `pending-config` : au moins une valeur HT manque, aucun montant n’est publié.
+ */
+export type PricingResultStatus = "ready" | "ready-ht" | "pending-config";
+
 export type PricingResult = {
-  status: "ready" | "pending-config";
+  status: PricingResultStatus;
   configVersion: string;
   currency: string;
   service: ServiceId;

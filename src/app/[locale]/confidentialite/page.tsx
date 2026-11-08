@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Confidentialité",
-    description: "Politique de confidentialité de Talum et traitement des données soumises via le site.",
+    description: "Politique de confidentialité de Taloom et traitement des données soumises via le site.",
   };
 }
 

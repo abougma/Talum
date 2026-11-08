@@ -4,7 +4,7 @@ import { computeEstimate, getMissingConfigFields, validatePricingConfig } from "
 import { SERVICE_IDS } from "../types";
 
 describe("configuration publique", () => {
-  it("est structurellement valide malgré les valeurs en attente", () => {
+  it("est structurellement valide malgré la TVA en attente", () => {
     expect(validatePricingConfig(pricingConfig)).toEqual([]);
   });
 
@@ -53,7 +53,7 @@ describe("configuration publique", () => {
     }
   });
 
-  it("reste en attente pour chaque service tant que les TJM manquent", () => {
+  it("publie une estimation HT pour chaque service, sans TVA ni TTC", () => {
     for (const service of SERVICE_IDS) {
       const estimate = computeEstimate(pricingConfig, {
         service,
@@ -63,12 +63,43 @@ describe("configuration publique", () => {
         urgency: "standard",
       });
 
-      expect(estimate.status, service).toBe("pending-config");
-      expect(estimate.totalHT, service).toBeNull();
+      expect(estimate.status, service).toBe("ready-ht");
+      expect(estimate.totalHT, service).not.toBeNull();
+      expect(estimate.totalHT, service).toBeGreaterThan(0);
+      expect(estimate.rangeHT, service).not.toBeNull();
+      expect(estimate.durationWeeks, service).not.toBeNull();
+      expect(estimate.vat.regime, service).toBeNull();
+      expect(estimate.vat.amount, service).toBeNull();
+      expect(estimate.totalTTC, service).toBeNull();
+      expect(estimate.rangeTTC, service).toBeNull();
+      expect(estimate.missingConfig, service).toEqual(["vat.regime"]);
     }
   });
 
-  it("expose une liste de valeurs manquantes non vide", () => {
-    expect(getMissingConfigFields(pricingConfig).length).toBeGreaterThan(0);
+  it("ne laisse manquer que le régime de TVA", () => {
+    expect(getMissingConfigFields(pricingConfig)).toEqual(["vat.regime"]);
+  });
+
+  it("positionne l’IA comme ligne de service à forte valeur", () => {
+    const iaRate = pricingConfig.services.ia.dailyRate ?? 0;
+    const webRate = pricingConfig.services.web.dailyRate ?? 0;
+    const conseilRate = pricingConfig.services.conseil.dailyRate ?? 0;
+    const pmRate = pricingConfig.services["gestion-de-projet"].dailyRate ?? 0;
+
+    expect(iaRate).toBeGreaterThan(conseilRate);
+    expect(conseilRate).toBeGreaterThan(webRate);
+    expect(pmRate).toBeGreaterThanOrEqual(webRate);
+  });
+
+  it("garde la TVA et les données légales hors de la grille publiée", () => {
+    expect(pricingConfig.vat.regime).toBeNull();
+    expect(pricingConfig.vat.rate).toBeNull();
+  });
+
+  it("prévoit une contrainte de conformité IA", () => {
+    const constraint = pricingConfig.constraints.find((item) => item.id === "conformite-ia");
+
+    expect(constraint).toBeDefined();
+    expect(constraint?.days).toBeGreaterThan(0);
   });
 });

@@ -1,4 +1,4 @@
-# Talum — Direction de design & design system (Phase 1)
+# Taloom — Direction de design & design system (Phase 1)
 
 Direction « très carré » : grille 12 colonnes, angles à 0, filets 1 px, blanc dominant, hiérarchie typographique nette. L'accent est rare : lien, focus, état actif, donnée clé. Aucun contenu client inventé : les chiffres, certifications et coordonnées restent `[À COMPLÉTER]`.
 
@@ -136,7 +136,7 @@ Durées : `120 ms` (états), `160 ms` (panneaux), `240 ms` (progression). Easing
 **Accueil — desktop**
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ TALUM       Services  Réalisations  Conseil  À propos [Devis]│
+│ TALOOM       Services  Réalisations  Conseil  À propos [Devis]│
 ├──────────────────────────────────────────────────────────────┤
 │ H1 Promesse (8 col)                  │ Preuve chiffrée (4 col)│
 │ Sous-titre (6 col) [Devis] [Contact] │ [À COMPLÉTER]          │

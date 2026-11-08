@@ -1,6 +1,6 @@
-# Talum
+# Taloom
 
-Site vitrine et outils d'accompagnement pour Talum. L'interface démarre en français et prépare le routage pour l'anglais.
+Site vitrine et outils d'accompagnement pour Taloom. L'interface démarre en français et prépare le routage pour l'anglais.
 
 ## Prérequis
 
@@ -29,9 +29,10 @@ npm run build
 
 Tous les montants, jours et coefficients de l'estimateur vivent dans `src/lib/pricing/config.ts`. Aucun composant ne contient de prix en dur.
 
-- Une valeur `null` signifie « donnée client non fournie ». Le moteur renvoie alors `status: "pending-config"` et l'interface n'affiche aucun prix.
-- Pour activer l'estimateur, renseigner les `dailyRate`, `baseDays`, `features[].days`, `constraints[].days`, `fees[].amount`, les `complexityFactors`, les `urgencyFactors`, `riskMarginRate` et `rangeSpread`.
-- Choisir `vat.regime` :
+- Une valeur `null` signifie « donnée client non fournie ». Si une valeur HT manque, le moteur renvoie `status: "pending-config"` et l'interface n'affiche aucun prix.
+- Si le HT est complet mais que `vat.regime` reste `null`, le moteur renvoie `status: "ready-ht"` : le HT et la fourchette HT sont affichés, la TVA, le TTC et le PDF restent indisponibles.
+- La grille actuelle est une proposition de lancement (`version: "2026-11-08-proposition"`), documentée dans `docs/pricing-proposal.md`. Elle n'est pas validée par le client.
+- Pour activer le TTC, choisir `vat.regime` :
   - `"franchise"` avec `rate: 0` (TVA non applicable, art. 293 B du CGI) ;
   - `"standard"` avec `rate: 0.2` (TVA à 20 %).
 - `npm test` vérifie le moteur avec une configuration de test (`src/lib/pricing/__tests__/fixtures.ts`). Les tarifs réels ne doivent jamais servir de fixture.
@@ -42,8 +43,8 @@ Pour valider une modification de tarifs : renseigner la config, lancer `npm test
 ## Docker
 
 ```bash
-docker build -t talum-site .
-docker run --rm -p 3000:3000 talum-site
+docker build -t taloom-site .
+docker run --rm -p 3000:3000 taloom-site
 ```
 
 ## Configuration
@@ -61,7 +62,7 @@ Le formulaire envoie les coordonnées et le message au destinataire configuré a
 ```env
 RESEND_API_KEY=re_...
 CONTACT_TO_EMAIL=votre-adresse-personnelle@example.com
-CONTACT_FROM_EMAIL=Talum <contact@votre-domaine.com>
+CONTACT_FROM_EMAIL=Taloom <contact@votre-domaine.com>
 ```
 
 En production, ajouter ces mêmes variables dans les paramètres d’environnement de l’hébergeur, sans publier ni partager la clé API. La réponse du formulaire peut alors être envoyée directement à votre adresse personnelle ; répondre au courriel reçu répondra au demandeur.

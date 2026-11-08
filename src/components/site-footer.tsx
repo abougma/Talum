@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div>
         <Link className="wordmark" href="/">
-          TALUM<span aria-hidden="true">.</span>
+          TALOOM<span aria-hidden="true">.</span>
         </Link>
         <p>{t("statement")}</p>
       </div>
@@ -16,7 +16,7 @@ export function SiteFooter() {
         <Link href="/mentions-legales">{t("legal")}</Link>
         <Link href="/confidentialite">{t("privacy")}</Link>
         <span>
-          © {new Date().getFullYear()} Talum. {t("copyright")}
+          © {new Date().getFullYear()} Taloom. {t("copyright")}
         </span>
       </div>
     </footer>

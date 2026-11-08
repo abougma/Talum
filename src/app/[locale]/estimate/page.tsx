@@ -2,17 +2,21 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { EstimateWidget } from "@/components/estimate-widget";
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Estimateur",
-    description: "Estimez rapidement le budget et la portée d’un projet Talum.",
-  };
-}
+import { PricingGrid } from "@/components/pricing-grid";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "EstimatePage" });
+
+  return {
+    title: t("title"),
+    description: t("intro"),
+  };
+}
 
 export default async function EstimatePage({ params }: Props) {
   const { locale } = await params;
@@ -28,6 +32,8 @@ export default async function EstimatePage({ params }: Props) {
       </header>
 
       <EstimateWidget />
+
+      <PricingGrid />
 
       <section aria-label="Appel à l’action" className="cta-band">
         <h2>{t("cta")}</h2>

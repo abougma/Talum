@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Développement, cloud et IA pour vos projets",
-    "description": "Talum conçoit, développe et accompagne vos projets numériques, du cadrage à la mise en production."
+    "description": "Taloom conçoit, développe et accompagne vos projets numériques, du cadrage à la mise en production."
   },
   "Navigation": {
     "primary": "Principale",
@@ -15,10 +15,12 @@
     "menu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "language": "Langue",
-    "switchToEnglish": "Read this site in English"
+    "switchToEnglish": "Read this site in English",
+    "switchToDarkTheme": "Activer le thème sombre",
+    "switchToLightTheme": "Activer le thème clair"
   },
   "HomePage": {
-    "eyebrow": "Talum · Lille & Abidjan",
+    "eyebrow": "Taloom · Lille & Abidjan",
     "title": "Vos projets numériques, du cadrage à la mise en production.",
     "intro": "Développement web et applicatif, cloud & DevOps, gestion de projet, intelligence artificielle et conseil technique. Un interlocuteur, de l’idée au suivi.",
     "estimateCta": "Estimer mon projet",
@@ -67,13 +69,13 @@
     "estimatePathCta": "Ouvrir l’estimateur",
     "advicePathTitle": "Clarifier l’approche",
     "advicePathText": "Le besoin est encore flou. Quelques questions suffisent pour identifier la bonne approche et les risques.",
-    "advicePathCta": "Voir le conseil",
+    "advicePathCta": "Ouvrir l’assistant",
     "contactLabel": "Contact",
     "contactIntro": "Vous avez un projet numérique ? Parlons-en."
   },
   "ServicesPage": {
     "eyebrow": "Services",
-    "title": "Les expertises de Talum",
+    "title": "Les expertises de Taloom",
     "description": "Cinq expertises : développement web et applicatif, cloud & DevOps, gestion de projet, IA et conseil technique.",
     "intro": "Un périmètre clair, des livrables concrets et un interlocuteur unique de l’idée au suivi. Chaque expertise peut être mobilisée seule ou combinée aux autres.",
     "summaryLabel": "Sommaire",
@@ -84,12 +86,13 @@
     "ctaLabel": "Appel à l’action",
     "cta": "Un besoin qui traverse plusieurs expertises ?",
     "estimateCta": "Estimer mon projet",
-    "contactCta": "Parler de mon projet"
+    "contactCta": "Parler de mon projet",
+    "advisorCta": "Utiliser l’assistant Conseil"
   },
   "ProjectsPage": {
     "eyebrow": "Réalisations",
     "title": "Des outils utiles, pensés pour le terrain.",
-    "description": "Études de cas Talum : contexte, problème, solution, stack, résultats et apprentissages.",
+    "description": "Études de cas Taloom : contexte, problème, solution, stack, résultats et apprentissages.",
     "intro": "Billetterie, emploi, logistique, immobilier, éducation : des produits numériques conçus autour de parcours et de besoins métier concrets.",
     "resultLabel": "Résultat",
     "seeMore": "Visiter le projet",
@@ -131,13 +134,14 @@
   },
   "AboutPage": {
     "eyebrow": "À propos",
-    "title": "Talum, une approche pragmatique et fiable.",
-    "description": "Parcours, valeurs et méthode de travail d’Armel BOUGMA, fondateur de Talum, à Lille et Abidjan.",
+    "title": "Taloom, une approche pragmatique et fiable.",
+    "description": "Parcours, valeurs et méthode de travail d’Armel BOUGMA, fondateur de Taloom, à Lille et Abidjan.",
     "intro": "Je conçois des solutions numériques utiles, maintenables et adaptées à l’environnement de mes clients.",
     "founderLabel": "Fondateur",
     "founderName": "Armel BOUGMA",
+    "founderPhotoAlt": "Portrait d’Armel BOUGMA, fondateur de Taloom",
     "founderRole": "Lead developer et chef de projet · Lille & Abidjan",
-    "storyTitle": "Pourquoi Talum",
+    "storyTitle": "Pourquoi Taloom",
     "story": "À Lille et Abidjan, je soutiens les TPE/PME, start-ups, écoles et associations qui ont besoin d’un interlocuteur sérieux, capable de cadrer, construire et accompagner un projet numérique sans jargon inutile.",
     "storySecond": "Le travail part toujours du besoin réel : comprendre le métier, écrire le périmètre, choisir une architecture proportionnée et livrer quelque chose qui sert. Le reste — la technique, les outils, la méthode — est au service de ce résultat.",
     "valuesTitle": "Valeurs",
@@ -220,13 +224,13 @@
   "LegalPage": {
     "eyebrow": "Mentions légales",
     "title": "Mentions légales",
-    "intro": "Informations administratives, responsabilités et conditions générales d’utilisation du site Talum.",
+    "intro": "Informations administratives, responsabilités et conditions générales d’utilisation du site Taloom.",
     "identityTitle": "Éditeur du site",
-    "identityText": "Le site Talum est édité par une structure indépendante. Les informations officielles — statut juridique, SIRET, adresse du siège, TVA et directeur de publication — restent à compléter avant la mise en ligne.",
+    "identityText": "Le site Taloom est édité par une structure indépendante. Les informations officielles — statut juridique, SIRET, adresse du siège, TVA et directeur de publication — restent à compléter avant la mise en ligne.",
     "contactTitle": "Contact",
     "contactText": "Pour toute question ou demande, utilisez le formulaire de contact disponible sur le site. Les coordonnées définitives devront être validées avant la mise en production.",
     "responsibilityTitle": "Responsabilité",
-    "responsibilityText": "Talum met tout en œuvre pour fournir des informations fiables et à jour, sans toutefois garantir l’absence totale d’erreurs ou d’omissions. Les contenus sont proposés à titre informatif et peuvent être modifiés à tout moment."
+    "responsibilityText": "Taloom met tout en œuvre pour fournir des informations fiables et à jour, sans toutefois garantir l’absence totale d’erreurs ou d’omissions. Les contenus sont proposés à titre informatif et peuvent être modifiés à tout moment."
   },
   "PrivacyPage": {
     "eyebrow": "Confidentialité",
@@ -250,9 +254,18 @@
       "platform": "Plateforme / SaaS"
     },
     "scope": "Niveau de complexité",
-    "scopeLevels": ["Simple", "Moyen", "Élevé", "Complet"],
+    "scopeLevels": [
+      "Simple",
+      "Moyen",
+      "Élevé",
+      "Complet"
+    ],
     "urgency": "Urgence",
-    "urgencyLevels": ["Standard", "Confort", "Prioritaire"],
+    "urgencyLevels": [
+      "Standard",
+      "Confort",
+      "Prioritaire"
+    ],
     "addOns": "Options",
     "aiAutomation": "Automatisation IA",
     "opsSetup": "Accompagnement cloud / CI-CD",
@@ -265,7 +278,7 @@
     "contact": "Parler de mon projet",
     "pendingLabel": "Estimateur en préparation",
     "pendingTitle": "Les tarifs seront publiés après validation.",
-    "pendingText": "Le moteur de calcul est prêt et testé. Les taux journaliers, les coefficients et le régime de TVA doivent encore être fournis et validés par Talum : aucune estimation chiffrée n’est affichée tant que ce n’est pas fait.",
+    "pendingText": "Le moteur de calcul est prêt et testé. Les taux journaliers, les coefficients et le régime de TVA doivent encore être fournis et validés par Taloom : aucune estimation chiffrée n’est affichée tant que ce n’est pas fait.",
     "pendingItemOne": "Moteur pur, testé et traçable",
     "pendingItemTwo": "Aucun tarif inventé ni valeur par défaut",
     "pendingItemThree": "Fourchette, TVA et PDF dès validation des tarifs",
@@ -277,12 +290,330 @@
     "vatLabel": "TVA",
     "totalTtcLabel": "Total TTC",
     "durationLabel": "Durée indicative",
-    "weeks": "{min} à {max} semaines"
+    "weeks": "{min} à {max} semaines",
+    "gridEyebrow": "Grille indicative",
+    "gridTitle": "Grille tarifaire proposée",
+    "gridIntro": "Taux journaliers HT et charge de base par prestation. Les montants sont indicatifs et seront confirmés après cadrage.",
+    "gridCaption": "Taux journalier HT et charge de base par prestation",
+    "gridService": "Prestation",
+    "gridDailyRate": "TJM HT / jour",
+    "gridBaseDays": "Charge de base",
+    "gridDayUnit": "{days} j",
+    "gridNote": "Grille proposée, non contractuelle. Elle ne comprend ni la TVA, ni les frais de modèles IA, ni l’infrastructure.",
+    "gridVersion": "Version de la grille : {version}",
+    "aiNote": "L’IA est une ligne de service à part entière : audit, cas d’usage, prototype, RAG, agents, évaluation et formation. Les coûts de modèles et d’infrastructure sont refacturés au réel.",
+    "vatPending": "À définir",
+    "htOnlyNote": "Montants HT. La TVA et le total TTC seront affichés dès validation du régime applicable.",
+    "proposalText": "Estimation indicative calculée à partir de la grille tarifaire proposée. Les montants sont HT.",
+    "htLabel": "HT",
+    "gridOnRequest": "Sur devis",
+    "weeksSingle": "{weeks, plural, one {# semaine} other {# semaines}}",
+    "exampleLabel": "Exemple : site web standard",
+    "exampleNote": "Inclut le cadrage initial et la mise en production. Hors TVA, modèles IA et infrastructure."
   },
   "Footer": {
     "statement": "Conception et accompagnement de projets numériques.",
     "legal": "Mentions légales",
     "privacy": "Confidentialité",
     "copyright": "Tous droits réservés."
+  },
+  "Advisor": {
+    "approaches": {
+      "cadrage": "Cadrage et priorisation",
+      "mvp": "MVP livrable",
+      "plateforme": "Plateforme évolutive",
+      "api": "API et socle de données",
+      "fiabilisation": "Fiabilisation de l’existant",
+      "automatisation": "Automatisation encadrée",
+      "audit": "Audit technique",
+      "evolution": "Évolution de l’existant"
+    },
+    "reasons": {
+      "difficulte": "Le projet est en difficulté : un audit permet d’identifier les causes avant d’engager de nouveaux travaux.",
+      "conseil": "La demande relève d’un avis technique : un audit ciblé clarifie les options et les risques.",
+      "reprendre": "Reprendre un existant demande d’abord de comprendre son état réel, ses dépendances et ses points de rupture.",
+      "ia": "Un usage IA doit être encadré : prototype, mesure de qualité, coûts et garde-fous avant intégration.",
+      "automatiser": "L’objectif est d’automatiser une tâche : un périmètre mesurable et une validation humaine sont définis avant la mise en production.",
+      "cloud": "Le besoin porte sur l’infrastructure : conteneurisation, déploiement, sauvegardes et supervision sont traités comme un socle.",
+      "fiabiliser": "L’existant doit être fiabilisé : les priorités sont la stabilité, la supervision et la réversibilité des mises en production.",
+      "api": "Le projet expose des données ou des services : le contrat d’API, la sécurité et les tests passent au premier plan.",
+      "existant": "Un produit existe déjà : l’approche privilégie l’évolution par lots sans casser les parcours en production.",
+      "idee": "Le besoin est encore une idée : un cadrage court permet de fixer le problème, le périmètre et les critères de réussite.",
+      "formation": "L’objectif inclut la transmission : un cadrage et des formats de travail explicites sont posés dès le départ.",
+      "budgetLimite": "Le budget est contraint : un cadrage resserré permet de choisir un premier périmètre réellement utile.",
+      "plateforme": "Le projet est une application avec une ambition large : une plateforme évolutive évite de reconstruire le socle à chaque étape.",
+      "delai": "Le délai est serré : un MVP priorisé concentre l’effort sur les parcours essentiels.",
+      "siteVendre": "Le site doit vendre : un MVP centré sur le message, les parcours de contact et la mesure est privilégié.",
+      "appCadre": "Le besoin applicatif est cadré : un MVP permet de livrer les parcours essentiels et d’ajuster ensuite.",
+      "siteCadre": "Le besoin de site est cadré : un MVP livre une première version utile et mesurable.",
+      "fallback": "Les réponses ne déclenchent pas de règle spécifique : un cadrage court permet de préciser le besoin."
+    },
+    "stack": {
+      "scrum": "Scrum",
+      "kanban": "Kanban",
+      "githubProjects": "GitHub Projects",
+      "nextjs": "Next.js",
+      "react": "React",
+      "typescript": "TypeScript",
+      "postgresql": "PostgreSQL",
+      "node": "Node.js",
+      "docker": "Docker",
+      "openapi": "OpenAPI",
+      "tests": "Tests automatisés",
+      "githubActions": "GitHub Actions",
+      "vps": "VPS Linux",
+      "nginx": "Nginx",
+      "observability": "Supervision et alertes",
+      "llmApis": "API LLM",
+      "rag": "RAG",
+      "automation": "Automatisation",
+      "python": "Python",
+      "auditedSystem": "Système audité",
+      "existingSystem": "Système existant",
+      "cicd": "CI/CD"
+    },
+    "risks": {
+      "perimetre": "Périmètre",
+      "delai": "Délai",
+      "securite": "Sécurité",
+      "conformite": "Conformité",
+      "integration": "Intégration",
+      "budget": "Budget",
+      "transfert": "Transfert de compétences",
+      "hebergement": "Hébergement",
+      "qualite": "Qualité",
+      "donnees": "Données",
+      "dependance": "Dépendance",
+      "regression": "Régression",
+      "dette": "Dette technique",
+      "complexite": "Complexité"
+    },
+    "nextSteps": {
+      "contact": "Un échange pour préciser le contexte.",
+      "cadrage": "Un atelier de cadrage pour fixer le périmètre.",
+      "audit": "Un audit court pour établir un diagnostic."
+    },
+    "assumptions": {
+      "answers": "La recommandation repose uniquement sur les réponses déclarées.",
+      "duration": "La durée est un ordre de grandeur, pas un engagement.",
+      "constraints": "Les contraintes sélectionnées ajoutent du temps et des points de vigilance.",
+      "noPrice": "Aucun tarif n’est calculé ni affiché.",
+      "config": "Les règles sont versionnées et déterministes."
+    },
+    "disclaimers": {
+      "noCommitment": "Cet avis est indicatif et ne constitue ni un devis ni un engagement contractuel.",
+      "humanValidation": "Une validation humaine reste nécessaire avant tout lancement de travaux.",
+      "rulesBased": "L’assistant applique des règles écrites ; il n’utilise pas de modèle de langage."
+    }
+  },
+  "AdvisorPage": {
+    "eyebrow": "Conseil",
+    "title": "Cinq questions pour clarifier votre projet.",
+    "description": "Un premier avis structuré : approche recommandée, stack indicative, durée et points de vigilance.",
+    "intro": "Cet assistant applique des règles écrites pour proposer une approche, une durée indicative et des points de vigilance. Il ne remplace pas un échange humain et ne produit ni prix, ni devis, ni engagement.",
+    "progressLabel": "Progression",
+    "step": "Étape {current} sur {total}",
+    "stepAnnouncement": "Étape {current} sur {total} : {title}",
+    "steps": {
+      "projectType": "Type de projet",
+      "goal": "Objectif",
+      "stage": "Avancement",
+      "constraints": "Contraintes",
+      "budget": "Budget"
+    },
+    "questions": {
+      "projectType": "Quel type de projet ?",
+      "goal": "Quel est l’objectif principal ?",
+      "stage": "Où en est le projet aujourd’hui ?",
+      "constraints": "Quelles contraintes s’appliquent déjà ?",
+      "constraintsHelp": "Sélectionnez tout ce qui s’applique. Cette étape est facultative.",
+      "budget": "Quel budget envisagez-vous ?"
+    },
+    "projectTypes": {
+      "site": "Site vitrine ou institutionnel",
+      "app": "Application métier",
+      "api": "API ou socle de données",
+      "cloud": "Cloud, DevOps ou infrastructure",
+      "ia": "IA ou automatisation",
+      "conseil": "Conseil ou audit technique"
+    },
+    "projectTypeHints": {
+      "site": "Présenter une activité, publier des contenus, générer des contacts.",
+      "app": "Gérer des utilisateurs, des données et des processus métier.",
+      "api": "Exposer des données ou des services à d’autres applications.",
+      "cloud": "Déployer, superviser et sécuriser une infrastructure.",
+      "ia": "Automatiser une tâche ou intégrer un usage IA encadré.",
+      "conseil": "Faire relire une architecture, un code ou un projet en difficulté."
+    },
+    "goals": {
+      "lancer": "Lancer le projet",
+      "vendre": "Vendre ou générer des contacts",
+      "fiabiliser": "Fiabiliser l’existant",
+      "automatiser": "Automatiser une tâche",
+      "reprendre": "Reprendre un projet existant",
+      "former": "Former ou transmettre"
+    },
+    "goalHints": {
+      "lancer": "Le projet n’est pas encore en production.",
+      "vendre": "Le site doit soutenir l’activité commerciale.",
+      "fiabiliser": "La priorité est la stabilité et l’exploitation.",
+      "automatiser": "Une tâche répétitive consomme du temps.",
+      "reprendre": "Un prestataire ou une équipe a déjà travaillé sur le sujet.",
+      "former": "Les équipes doivent gagner en autonomie."
+    },
+    "stages": {
+      "idee": "Idée",
+      "cadre": "Besoin cadré",
+      "existant": "Produit existant",
+      "difficulte": "Projet en difficulté"
+    },
+    "stageHints": {
+      "idee": "Le problème et le résultat attendu restent à préciser.",
+      "cadre": "Les objectifs et le périmètre sont déjà écrits.",
+      "existant": "Une première version est en production.",
+      "difficulte": "Le projet est bloqué, instable ou contesté."
+    },
+    "constraints": {
+      "delai": "Délai serré",
+      "budget-limite": "Budget contraint",
+      "securite": "Exigences de sécurité",
+      "conformite": "Conformité ou RGPD",
+      "integration": "Intégration à un SI existant",
+      "equipe-interne": "Équipe interne à mobiliser",
+      "hebergement": "Hébergement imposé"
+    },
+    "budgets": {
+      "limite": "Limité",
+      "modere": "Modéré",
+      "confortable": "Confortable",
+      "a-definir": "À définir"
+    },
+    "budgetHints": {
+      "limite": "Priorité à un premier périmètre utile.",
+      "modere": "Un périmètre solide, avec des arbitrages.",
+      "confortable": "Un projet plus large et évolutif.",
+      "a-definir": "Le budget sera précisé après cadrage."
+    },
+    "required": "Choisissez une réponse pour continuer.",
+    "back": "Précédent",
+    "next": "Continuer",
+    "submit": "Voir la recommandation",
+    "restart": "Recommencer",
+    "edit": "Modifier mes réponses",
+    "resultEyebrow": "Recommandation",
+    "resultIntro": "Cette recommandation découle de vos réponses et des règles versionnées ci-dessous.",
+    "reasonLabel": "Pourquoi cette approche",
+    "durationLabel": "Durée indicative",
+    "duration": "{min} à {max} semaines",
+    "durationNote": "Ordre de grandeur, hors délais de décision, de validation et de disponibilité des contenus.",
+    "stackLabel": "Stack indicative",
+    "risksLabel": "Points de vigilance",
+    "assumptionsLabel": "Hypothèses",
+    "disclaimersLabel": "À garder en tête",
+    "nextStepLabel": "Prochaine étape",
+    "nextStepCta": {
+      "contact": "Parler de mon projet",
+      "cadrage": "Demander un cadrage",
+      "audit": "Demander un audit"
+    },
+    "traceabilityLabel": "Traçabilité",
+    "ruleLabel": "Règle appliquée",
+    "configVersion": "Version des règles",
+    "noLlm": "Règles déterministes, sans IA générative.",
+    "error": "La recommandation n’a pas pu être calculée. Réessayez ou contactez-nous directement.",
+    "bottomTitle": "La recommandation ne remplace pas un échange.",
+    "bottomText": "Un cadrage court permet de valider le périmètre, les contraintes et les prochaines étapes.",
+    "bottomCta": "Parler de mon projet"
+  },
+  "EstimatePricing": {
+    "services": {
+      "web": "Développement web et applicatif",
+      "api": "API et intégrations",
+      "cloudDevops": "Cloud & DevOps",
+      "gestionDeProjet": "Gestion de projet",
+      "ia": "IA et automatisation",
+      "conseil": "Conseil et audit technique"
+    },
+    "features": {
+      "web": {
+        "pages": "Pages et parcours supplémentaires",
+        "authentification": "Authentification et comptes",
+        "paiement": "Paiement en ligne",
+        "backOffice": "Back-office d’administration",
+        "integrations": "Intégrations tierces",
+        "multilingue": "Multilingue"
+      },
+      "api": {
+        "authentification": "Authentification et autorisation",
+        "integrations": "Intégrations tierces",
+        "tempsReel": "Temps réel",
+        "notifications": "Notifications",
+        "documentation": "Documentation et contrat d’API"
+      },
+      "cloud": {
+        "conteneurisation": "Conteneurisation",
+        "ciCd": "Intégration et déploiement continus",
+        "supervision": "Supervision et alertes",
+        "sauvegardes": "Sauvegardes et restauration",
+        "secrets": "Gestion des secrets"
+      },
+      "pm": {
+        "accompagnement": "Accompagnement hebdomadaire",
+        "recette": "Recette et acceptation",
+        "formation": "Formation et transfert",
+        "reporting": "Reporting et comités",
+        "coordination": "Coordination des partenaires"
+      },
+      "ia": {
+        "audit": "Audit IA et cadrage des cas d’usage",
+        "chatbot": "Chatbot ou assistant",
+        "rag": "RAG sur documents",
+        "agents": "Agents et enchaînement d’outils",
+        "automatisation": "Automatisation de tâches",
+        "evaluation": "Évaluation de la qualité",
+        "formation": "Formation et acculturation IA"
+      },
+      "conseil": {
+        "auditArchitecture": "Audit d’architecture",
+        "auditCode": "Audit de code",
+        "auditSecurite": "Audit de sécurité",
+        "atelier": "Atelier de restitution",
+        "planAction": "Plan d’action"
+      }
+    },
+    "constraints": {
+      "securite": "Exigences de sécurité",
+      "conformite": "Conformité / RGPD",
+      "conformiteIa": "Conformité IA / AI Act",
+      "integration": "Intégration à un système existant",
+      "hebergement": "Hébergement imposé",
+      "maintenance": "Reprise de maintenance"
+    },
+    "fees": {
+      "cadrage": "Cadrage initial",
+      "miseEnProduction": "Mise en production"
+    },
+    "exclusions": {
+      "contenus": "Rédaction et production de contenus",
+      "licences": "Licences et abonnements logiciels",
+      "deplacements": "Déplacements et hébergement",
+      "fraisLegaux": "Frais légaux et administratifs",
+      "supportUrgence": "Support et interventions d’urgence",
+      "coutModeles": "Consommation des modèles LLM et API (facturée au réel)",
+      "infrastructure": "Infrastructure cloud, stockage et services tiers (facturés au réel)"
+    },
+    "vatFranchise": "Mention de TVA à définir selon le régime applicable.",
+    "lines": {
+      "riskMargin": "Marge de risque",
+      "rounding": "Arrondi"
+    },
+    "assumptions": {
+      "workingDaysPerWeek": "Jours travaillés par semaine : {days}",
+      "roundingStep": "Arrondi des montants : {amount} €",
+      "dayRounding": "Arrondi des jours : {days}",
+      "riskMargin": "Marge de risque : {percent}",
+      "rangeSpread": "Amplitude de la fourchette : {percent}",
+      "vatRegime": "Régime de TVA : {regime}"
+    }
   }
 }

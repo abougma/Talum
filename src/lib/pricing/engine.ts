@@ -711,8 +711,23 @@ export function computeEstimate(config: PricingConfig, input: PricingInput): Pri
     durationWeeks = { min: minWeeks, max: maxWeeks };
   }
 
+  /**
+   * La TVA est un blocage distinct des valeurs HT : une grille complète sans
+   * régime de TVA reste publiable en HT (`ready-ht`), sans TTC ni PDF.
+   */
+  const vatPending =
+    config.vat.regime === null ||
+    (config.vat.regime === "standard" && config.vat.rate === null);
+  const missingHtValues = Array.from(missing).filter(
+    (field) => field !== "vat.regime" && field !== "vat.rate",
+  );
+
   const status: PricingResult["status"] =
-    missing.size === 0 && totalHT !== null && totalTTC !== null ? "ready" : "pending-config";
+    missingHtValues.length > 0 || totalHT === null || rangeHT === null
+      ? "pending-config"
+      : vatPending || totalTTC === null
+        ? "ready-ht"
+        : "ready";
 
   return {
     status,

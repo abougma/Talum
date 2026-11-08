@@ -2,7 +2,7 @@
 
 ## 2026-11-05T11:56:39+01:00 — UX/UI Agent
 
-- **Tâche** : Phase 1 — direction de design et design system du site Talum (aucun code d'implémentation).
+- **Tâche** : Phase 1 — direction de design et design system du site Taloom (aucun code d'implémentation).
 - **Contexte lu** : `context/project.md` (seul fichier de contexte disponible).
 - **Livrable** : `context/design-direction.md` — 10 sections : palette, typographie, grille/espacement, composants, tokens, mouvement, wireframes, règles « très carré », accessibilité, points à valider.
 - **Décisions proposées** : accent bleu encre `#1F4FD8` ; neutres froids ; Archivo (titres) + IBM Plex Sans (texte) via `next/font/google` ; grille 12 colonnes ; rayon `0` ; aucune ombre ; thèmes clair/sombre via `.dark` + `next-themes` (système par défaut, sans flash) ; animations limitées à 3 usages avec `prefers-reduced-motion`.

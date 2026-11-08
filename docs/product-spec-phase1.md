@@ -1,4 +1,4 @@
-# Talum — Spécification produit, Phase 1
+# Taloom — Spécification produit, Phase 1
 
 Contexte lu : `context/project.md`. Stack, ton et périmètre confirmés. Aucun tarif, résultat, certification ni identifiant légal n'est inventé : tout chiffre métier est balisé `[À COMPLÉTER]` ou `[EXEMPLE]`.
 
@@ -9,9 +9,9 @@ Contexte lu : `context/project.md`. Stack, ton et périmètre confirmés. Aucun 
 
 ## 1. Proposition de valeur
 
-- **A (recommandée)** — « Talum conçoit, développe et maintient les solutions numériques des TPE/PME, startups, écoles et associations, avec un interlocuteur unique du cadrage au suivi. »
-- **B** — « Talum accompagne les organisations qui ont un projet numérique — cadrage, développement, cloud, IA, conseil — pour livrer une solution utile et maintenable. »
-- **C** — « Un projet numérique mérite un interlocuteur qui comprend le métier et livre : Talum cadre, construit et suit votre solution, sans jargon et sans intermédiaire. »
+- **A (recommandée)** — « Taloom conçoit, développe et maintient les solutions numériques des TPE/PME, startups, écoles et associations, avec un interlocuteur unique du cadrage au suivi. »
+- **B** — « Taloom accompagne les organisations qui ont un projet numérique — cadrage, développement, cloud, IA, conseil — pour livrer une solution utile et maintenable. »
+- **C** — « Un projet numérique mérite un interlocuteur qui comprend le métier et livre : Taloom cadre, construit et suit votre solution, sans jargon et sans intermédiaire. »
 
 A dit quoi, pour qui, et ce qui rassure (continuité, interlocuteur unique). B est plus générique. C est plus engagée mais frôle la promesse commerciale.
 
@@ -21,7 +21,7 @@ A dit quoi, pour qui, et ce qui rassure (continuité, interlocuteur unique). B e
 
 **Navigation principale (5 entrées)** : Services · Réalisations · Conseil · Estimateur · À propos. CTA fixe dans l'en-tête : « Parler de mon projet » → Contact. Le lien actif est signalé, le focus clavier visible, le menu mobile reprend le même ordre.
 
-**Pied de page** : Talum (À propos, Réalisations, Contact) · Offres (les 5 services) · Outils (Conseil, Estimateur) · Légal (Mentions légales, Confidentialité, Cookies) · coordonnées, LinkedIn, mention « Estimation indicative non contractuelle ».
+**Pied de page** : Taloom (À propos, Réalisations, Contact) · Offres (les 5 services) · Outils (Conseil, Estimateur) · Légal (Mentions légales, Confidentialité, Cookies) · coordonnées, LinkedIn, mention « Estimation indicative non contractuelle ».
 
 **Parcours A — visiteur froid venu de LinkedIn**
 1. Accueil — hero et preuve → CTA « Voir une réalisation ».
@@ -38,7 +38,7 @@ A dit quoi, pour qui, et ce qui rassure (continuité, interlocuteur unique). B e
 5. Résultat — fourchette, durée, hypothèses → CTA « Télécharger le PDF », puis « Parler de mon projet ».
 
 **Parcours C — école ou association qui cherche un partenariat**
-1. Accueil — preuve et méthode → CTA « Découvrir Talum ».
+1. Accueil — preuve et méthode → CTA « Découvrir Taloom ».
 2. À propos — parcours, valeurs, zones d'intervention → CTA « Voir nos services ».
 3. Services — Gestion de projet ou Conseil → CTA « Être conseillé ».
 4. Conseil — 5 questions → CTA « Affiner avec un humain ».
@@ -50,16 +50,16 @@ A dit quoi, pour qui, et ce qui rassure (continuité, interlocuteur unique). B e
 
 | Page | Title (≤ 60) | Description (≤ 155) | JSON-LD |
 |---|---|---|---|
-| Accueil | Talum — Développement, cloud et IA pour vos projets (51) | Talum conçoit, développe et maintient vos solutions numériques : web, API, cloud, IA et conseil. Un interlocuteur unique, du cadrage au suivi. (144) | Organization, WebSite |
-| Services | Services — Développement, cloud, IA et conseil \| Talum (54) | Cinq expertises pour votre projet numérique : développement web et applicatif, cloud & DevOps, gestion de projet, IA et conseil technique. (136) | Service (×5), BreadcrumbList |
-| Réalisations | Réalisations et études de cas \| Talum (39) | Des projets réels, leur contexte, les choix techniques et les résultats. Découvrez les réalisations de Talum, dont Gestilok, SaaS de gestion locative. (150) | CollectionPage, ItemList |
-| Étude de cas | Gestilok — SaaS de gestion locative \| Talum (45) | Étude de cas Gestilok : contexte, problème, solution technique, résultats et apprentissages d'un SaaS de gestion locative mis en production. (137) | CreativeWork, BreadcrumbList |
-| Conseil | Conseil — quelle approche pour votre projet ? \| Talum (54) | Cinq questions pour obtenir une approche adaptée : méthode, stack indicative, durée et risques à surveiller. Sans engagement, sans jargon. (138) | WebPage, BreadcrumbList |
-| Estimateur | Estimateur de devis — fourchette et PDF \| Talum (49) | Décrivez votre projet en 5 étapes et obtenez une fourchette de prix, une durée indicative et un PDF récapitulatif. Estimation non contractuelle. (145) | WebPage, BreadcrumbList (aucun Offer) |
-| À propos | À propos — Armel BOUGMA, Talum (31) | Le parcours, les valeurs et la méthode de travail de Talum, société de services informatiques fondée par Armel BOUGMA, à Lille et Abidjan. (139) | AboutPage, Person, Organization |
-| Contact | Contact — parler de votre projet \| Talum (40) | Décrivez votre projet en quelques lignes. Réponse sous [À COMPLÉTER]. Talum intervient à Lille, en France et à distance. (127) | ContactPage, Organization |
-| Mentions légales | Mentions légales \| Talum (24) | Éditeur, hébergeur, propriété intellectuelle et informations légales du site Talum. [À COMPLÉTER : statut, SIRET, TVA]. (120) | WebPage |
-| Confidentialité | Confidentialité et cookies \| Talum (32) | Données collectées, finalités, durées de conservation, droits RGPD et gestion des cookies sur le site Talum. Aucun traceur sans consentement. (137) | WebPage |
+| Accueil | Taloom — Développement, cloud et IA pour vos projets (51) | Taloom conçoit, développe et maintient vos solutions numériques : web, API, cloud, IA et conseil. Un interlocuteur unique, du cadrage au suivi. (144) | Organization, WebSite |
+| Services | Services — Développement, cloud, IA et conseil \| Taloom (54) | Cinq expertises pour votre projet numérique : développement web et applicatif, cloud & DevOps, gestion de projet, IA et conseil technique. (136) | Service (×5), BreadcrumbList |
+| Réalisations | Réalisations et études de cas \| Taloom (39) | Des projets réels, leur contexte, les choix techniques et les résultats. Découvrez les réalisations de Taloom, dont Gestilok, SaaS de gestion locative. (150) | CollectionPage, ItemList |
+| Étude de cas | Gestilok — SaaS de gestion locative \| Taloom (45) | Étude de cas Gestilok : contexte, problème, solution technique, résultats et apprentissages d'un SaaS de gestion locative mis en production. (137) | CreativeWork, BreadcrumbList |
+| Conseil | Conseil — quelle approche pour votre projet ? \| Taloom (54) | Cinq questions pour obtenir une approche adaptée : méthode, stack indicative, durée et risques à surveiller. Sans engagement, sans jargon. (138) | WebPage, BreadcrumbList |
+| Estimateur | Estimateur de devis — fourchette et PDF \| Taloom (49) | Décrivez votre projet en 5 étapes et obtenez une fourchette de prix, une durée indicative et un PDF récapitulatif. Estimation non contractuelle. (145) | WebPage, BreadcrumbList (aucun Offer) |
+| À propos | À propos — Armel BOUGMA, Taloom (31) | Le parcours, les valeurs et la méthode de travail de Taloom, société de services informatiques fondée par Armel BOUGMA, à Lille et Abidjan. (139) | AboutPage, Person, Organization |
+| Contact | Contact — parler de votre projet \| Taloom (40) | Décrivez votre projet en quelques lignes. Réponse sous [À COMPLÉTER]. Taloom intervient à Lille, en France et à distance. (127) | ContactPage, Organization |
+| Mentions légales | Mentions légales \| Taloom (24) | Éditeur, hébergeur, propriété intellectuelle et informations légales du site Taloom. [À COMPLÉTER : statut, SIRET, TVA]. (120) | WebPage |
+| Confidentialité | Confidentialité et cookies \| Taloom (32) | Données collectées, finalités, durées de conservation, droits RGPD et gestion des cookies sur le site Taloom. Aucun traceur sans consentement. (137) | WebPage |
 
 Pas de `aggregateRating`, pas d'`Offer` avec prix, pas d'avis inventés. Le title et la description de Contact sont à finaliser avant mise en ligne (placeholder).
 
@@ -125,7 +125,7 @@ Objectif : produire une fourchette crédible et capter une demande qualifiée av
 [À COMPLÉTER] : TJM, charges, coefficients, régime de TVA, conditions de paiement, validité.
 
 ### À propos
-Objectif : incarner Talum et rassurer sur la méthode.
+Objectif : incarner Taloom et rassurer sur la méthode.
 1. Récit court — msg : qui, où, pourquoi.
 2. Valeurs (3) — msg : ce qui guide les décisions.
 3. Méthode — msg : comment se déroule une mission.

@@ -38,10 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: {
       default: t("title"),
-      template: "%s | Talum",
+      template: "%s | Taloom",
     },
     description: t("description"),
-    applicationName: "Talum",
+    applicationName: "Taloom",
   };
 }
 

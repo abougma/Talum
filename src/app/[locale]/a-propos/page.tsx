@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
 type Props = {
@@ -35,9 +36,19 @@ export default async function AboutPage({ params }: Props) {
 
       <section className="founder-block">
         <div className="founder-card">
-          <p className="eyebrow">{t("founderLabel")}</p>
-          <p className="founder-name">{t("founderName")}</p>
-          <p className="founder-role">{t("founderRole")}</p>
+          <Image
+            alt={t("founderPhotoAlt")}
+            className="founder-photo"
+            fill
+            priority
+            sizes="(max-width: 860px) 100vw, 40vw"
+            src="/armel-bougma.png"
+          />
+          <div className="founder-card-content">
+            <p className="eyebrow">{t("founderLabel")}</p>
+            <p className="founder-name">{t("founderName")}</p>
+            <p className="founder-role">{t("founderRole")}</p>
+          </div>
         </div>
         <div className="founder-story">
           <h2>{t("storyTitle")}</h2>

@@ -87,8 +87,11 @@ export default async function ServicesPage({ params }: Props) {
                   ))}
                 </ul>
               </div>
-              <Link className="text-link" href="/estimate">
-                {t("serviceCta")}
+              <Link
+                className="text-link"
+                href={service.slug === "conseil" ? "/conseil" : "/estimate"}
+              >
+                {service.slug === "conseil" ? t("advisorCta") : t("serviceCta")}
               </Link>
             </div>
           </section>

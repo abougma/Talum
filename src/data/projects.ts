@@ -35,7 +35,7 @@ const projectsFr: Project[] = [
   {
     slug: "billetpro",
     title: "BilletPro",
-    client: "Projet Talum",
+    client: "Projet Taloom",
     year: "[À COMPLÉTER]",
     role: "Conception et développement",
     featured: true,
@@ -58,8 +58,12 @@ const projectsFr: Project[] = [
       solution:
         "La plateforme couvre le parcours complet : création et gestion de l’événement, réservation et paiement en ligne (Stripe, Wave / Mobile Money, FCFA), puis validation de l’entrée par QR code avec un scanner. Les organisateurs suivent les places et les accès depuis un espace dédié.",
       results: [
-        { label: "Statut", value: "En ligne" },
-        { label: "Événements accompagnés", value: "[À COMPLÉTER]", note: "volume et période à préciser" },
+        { label: "Statut", value: "En développement" },
+        {
+          label: "Événements accompagnés",
+          value: "[À COMPLÉTER]",
+          note: "volume et période à préciser",
+        },
         { label: "Billets vendus", value: "[À COMPLÉTER]", note: "volume et période à préciser" },
       ],
       learnings: [
@@ -71,7 +75,7 @@ const projectsFr: Project[] = [
   {
     slug: "jobtrack",
     title: "JobTrack",
-    client: "Projet Talum",
+    client: "Projet Taloom",
     year: "[À COMPLÉTER]",
     role: "Conception et développement",
     featured: true,
@@ -94,8 +98,12 @@ const projectsFr: Project[] = [
       solution:
         "L’application propose un tableau de bord d’avancement, un suivi des candidatures, un profil professionnel, la génération de CV et des outils de préparation d’entretien, avec des espaces organisés et une approche RGPD.",
       results: [
-        { label: "Statut", value: "[À COMPLÉTER]" },
-        { label: "Candidatures suivies", value: "[À COMPLÉTER]", note: "volume et période à préciser" },
+        { label: "Statut", value: "En développement" },
+        {
+          label: "Candidatures suivies",
+          value: "[À COMPLÉTER]",
+          note: "volume et période à préciser",
+        },
         { label: "Utilisateurs", value: "[À COMPLÉTER]", note: "nombre et période à préciser" },
       ],
       learnings: [
@@ -107,7 +115,7 @@ const projectsFr: Project[] = [
   {
     slug: "livraison",
     title: "Plateforme de livraison",
-    client: "Projet Talum",
+    client: "Projet Taloom",
     year: "[À COMPLÉTER]",
     role: "Conception et développement",
     featured: false,
@@ -130,8 +138,12 @@ const projectsFr: Project[] = [
       solution:
         "Le parcours est découpé en étapes explicites : création de la demande, prise en charge par un livreur, suivi et validation de la livraison avec le destinataire. Un back-office et un mécanisme de dispatch coordonnent les opérations.",
       results: [
-        { label: "Statut", value: "[À COMPLÉTER]" },
-        { label: "Livraisons traitées", value: "[À COMPLÉTER]", note: "volume et période à préciser" },
+        { label: "Statut", value: "En développement" },
+        {
+          label: "Livraisons traitées",
+          value: "[À COMPLÉTER]",
+          note: "volume et période à préciser",
+        },
         { label: "Parcours", value: "Demande → prise en charge → livraison" },
       ],
       learnings: [
@@ -143,7 +155,7 @@ const projectsFr: Project[] = [
   {
     slug: "gestilok",
     title: "Gestilok",
-    client: "Projet Talum",
+    client: "Projet Taloom",
     year: "[À COMPLÉTER]",
     role: "Conception, développement et mise en production",
     featured: true,
@@ -169,7 +181,11 @@ const projectsFr: Project[] = [
       results: [
         { label: "Statut", value: "En production" },
         { label: "Utilisateurs réels", value: "Oui" },
-        { label: "Utilisateurs actifs", value: "[À COMPLÉTER]", note: "nombre et période à préciser" },
+        {
+          label: "Utilisateurs actifs",
+          value: "[À COMPLÉTER]",
+          note: "nombre et période à préciser",
+        },
       ],
       learnings: [
         "La mise en production change les priorités : sauvegardes, supervision et procédures d’exploitation comptent autant que les fonctionnalités.",
@@ -180,7 +196,7 @@ const projectsFr: Project[] = [
   {
     slug: "wesign",
     title: "Wesign",
-    client: "Projet Talum",
+    client: "Projet Taloom",
     year: "[À COMPLÉTER]",
     role: "Conception et développement",
     featured: false,
@@ -203,7 +219,7 @@ const projectsFr: Project[] = [
       solution:
         "L’application propose une authentification sécurisée, une gestion de session et des droits d’accès, ainsi que des tableaux de bord de suivi des présences.",
       results: [
-        { label: "Statut", value: "[À COMPLÉTER]" },
+        { label: "Statut", value: "En développement" },
         { label: "Étudiants suivis", value: "[À COMPLÉTER]", note: "volume et période à préciser" },
         { label: "Sécurité", value: "Authentification et gestion de session" },
       ],
@@ -219,7 +235,7 @@ const projectsEn: Project[] = [
   {
     slug: "billetpro",
     title: "BilletPro",
-    client: "Talum project",
+    client: "Taloom project",
     year: "[TO BE COMPLETED]",
     role: "Design and development",
     featured: true,
@@ -242,8 +258,12 @@ const projectsEn: Project[] = [
       solution:
         "The platform covers the full journey: event creation and management, online booking and payment (Stripe, Wave / Mobile Money, FCFA), then QR code validation with a scanner. Organisers track seats and access from a dedicated workspace.",
       results: [
-        { label: "Status", value: "Live" },
-        { label: "Events supported", value: "[TO BE COMPLETED]", note: "volume and period to confirm" },
+        { label: "Status", value: "In development" },
+        {
+          label: "Events supported",
+          value: "[TO BE COMPLETED]",
+          note: "volume and period to confirm",
+        },
         { label: "Tickets sold", value: "[TO BE COMPLETED]", note: "volume and period to confirm" },
       ],
       learnings: [
@@ -255,7 +275,7 @@ const projectsEn: Project[] = [
   {
     slug: "jobtrack",
     title: "JobTrack",
-    client: "Talum project",
+    client: "Taloom project",
     year: "[TO BE COMPLETED]",
     role: "Design and development",
     featured: true,
@@ -278,8 +298,12 @@ const projectsEn: Project[] = [
       solution:
         "The application provides a progress dashboard, application tracking, a professional profile, CV generation and interview preparation tools, with organised workspaces and a GDPR-aware approach.",
       results: [
-        { label: "Status", value: "[TO BE COMPLETED]" },
-        { label: "Applications tracked", value: "[TO BE COMPLETED]", note: "volume and period to confirm" },
+        { label: "Status", value: "In development" },
+        {
+          label: "Applications tracked",
+          value: "[TO BE COMPLETED]",
+          note: "volume and period to confirm",
+        },
         { label: "Users", value: "[TO BE COMPLETED]", note: "number and period to confirm" },
       ],
       learnings: [
@@ -291,7 +315,7 @@ const projectsEn: Project[] = [
   {
     slug: "livraison",
     title: "Delivery platform",
-    client: "Talum project",
+    client: "Taloom project",
     year: "[TO BE COMPLETED]",
     role: "Design and development",
     featured: false,
@@ -314,8 +338,12 @@ const projectsEn: Project[] = [
       solution:
         "The journey is split into explicit steps: request creation, courier assignment, tracking and delivery confirmation with the recipient. A back office and a dispatch mechanism coordinate operations.",
       results: [
-        { label: "Status", value: "[TO BE COMPLETED]" },
-        { label: "Deliveries handled", value: "[TO BE COMPLETED]", note: "volume and period to confirm" },
+        { label: "Status", value: "In development" },
+        {
+          label: "Deliveries handled",
+          value: "[TO BE COMPLETED]",
+          note: "volume and period to confirm",
+        },
         { label: "Journey", value: "Request → assignment → delivery" },
       ],
       learnings: [
@@ -327,7 +355,7 @@ const projectsEn: Project[] = [
   {
     slug: "gestilok",
     title: "Gestilok",
-    client: "Talum project",
+    client: "Taloom project",
     year: "[TO BE COMPLETED]",
     role: "Design, development and production release",
     featured: true,
@@ -364,7 +392,7 @@ const projectsEn: Project[] = [
   {
     slug: "wesign",
     title: "Wesign",
-    client: "Talum project",
+    client: "Taloom project",
     year: "[TO BE COMPLETED]",
     role: "Design and development",
     featured: false,
@@ -387,8 +415,12 @@ const projectsEn: Project[] = [
       solution:
         "The application provides secure authentication, session management and access rights, along with attendance tracking dashboards.",
       results: [
-        { label: "Status", value: "[TO BE COMPLETED]" },
-        { label: "Students tracked", value: "[TO BE COMPLETED]", note: "volume and period to confirm" },
+        { label: "Status", value: "In development" },
+        {
+          label: "Students tracked",
+          value: "[TO BE COMPLETED]",
+          note: "volume and period to confirm",
+        },
         { label: "Security", value: "Authentication and session management" },
       ],
       learnings: [

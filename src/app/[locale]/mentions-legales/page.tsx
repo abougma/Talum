@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Mentions légales",
-    description: "Mentions légales de Talum et informations de contact administratives.",
+    description: "Mentions légales de Taloom et informations de contact administratives.",
   };
 }
 

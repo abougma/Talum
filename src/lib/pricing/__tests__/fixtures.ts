@@ -80,6 +80,7 @@ export const fixtureConfig: PricingConfig = {
   constraints: [
     { id: "securite", labelKey: "fixture.constraint.securite", days: 3 },
     { id: "conformite", labelKey: "fixture.constraint.conformite", days: 2 },
+    { id: "conformite-ia", labelKey: "fixture.constraint.conformite-ia", days: 4 },
     { id: "integration-existant", labelKey: "fixture.constraint.integration", days: 5 },
     { id: "hebergement", labelKey: "fixture.constraint.hebergement", days: 2 },
     { id: "maintenance", labelKey: "fixture.constraint.maintenance", days: 2 },

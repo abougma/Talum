@@ -9,7 +9,7 @@ import { ThemeToggle } from "./theme-toggle";
 const navigationItems = [
   { key: "services", href: "/services" },
   { key: "projects", href: "/realisations" },
-  { key: "advice", href: "/services#conseil" },
+  { key: "advice", href: "/conseil" },
   { key: "about", href: "/a-propos" },
 ] as const;
 
@@ -27,8 +27,8 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link aria-label="Talum — accueil" className="wordmark" href="/" onClick={closeMenu}>
-          TALUM<span aria-hidden="true">.</span>
+        <Link aria-label="Taloom — accueil" className="wordmark" href="/" onClick={closeMenu}>
+          TALOOM<span aria-hidden="true">.</span>
         </Link>
 
         <button

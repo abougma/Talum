@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact-form";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Contact",
-    description: "Contactez Talum pour parler de votre projet.",
+    description: "Contactez Taloom pour parler de votre projet.",
   };
 }
 

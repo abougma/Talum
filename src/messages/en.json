@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Web development, cloud and AI for your projects",
-    "description": "Talum designs, builds and supports your digital projects, from scoping to production."
+    "description": "Taloom designs, builds and supports your digital projects, from scoping to production."
   },
   "Navigation": {
     "primary": "Primary",
@@ -15,10 +15,12 @@
     "menu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
-    "switchToEnglish": "Read this site in French"
+    "switchToEnglish": "Read this site in French",
+    "switchToDarkTheme": "Switch to dark theme",
+    "switchToLightTheme": "Switch to light theme"
   },
   "HomePage": {
-    "eyebrow": "Talum · Lille & Abidjan",
+    "eyebrow": "Taloom · Lille & Abidjan",
     "title": "Your digital projects, from scoping to production.",
     "intro": "Web and application development, cloud & DevOps, project management, artificial intelligence and technical consulting. One contact, from idea to follow-up.",
     "estimateCta": "Estimate my project",
@@ -67,13 +69,13 @@
     "estimatePathCta": "Open the estimator",
     "advicePathTitle": "Clarify the approach",
     "advicePathText": "The need is still unclear. A few questions are enough to identify the right approach and the risks.",
-    "advicePathCta": "See the advice",
+    "advicePathCta": "Open the advisor",
     "contactLabel": "Contact",
     "contactIntro": "Have a digital project? Let’s talk."
   },
   "ServicesPage": {
     "eyebrow": "Services",
-    "title": "Talum’s expertise",
+    "title": "Taloom’s expertise",
     "description": "Five areas of expertise: web and application development, cloud & DevOps, project management, AI and technical consulting.",
     "intro": "A clear scope, concrete deliverables and a single contact from idea to follow-up. Each expertise can be used alone or combined with others.",
     "summaryLabel": "Contents",
@@ -84,12 +86,13 @@
     "ctaLabel": "Call to action",
     "cta": "A need that spans several areas?",
     "estimateCta": "Estimate my project",
-    "contactCta": "Talk about my project"
+    "contactCta": "Talk about my project",
+    "advisorCta": "Use the advice assistant"
   },
   "ProjectsPage": {
     "eyebrow": "Work",
     "title": "Useful tools, designed for the field.",
-    "description": "Talum case studies: context, problem, solution, stack, results and lessons learned.",
+    "description": "Taloom case studies: context, problem, solution, stack, results and lessons learned.",
     "intro": "Ticketing, jobs, logistics, real estate, education: digital products designed around concrete business journeys and needs.",
     "resultLabel": "Result",
     "seeMore": "Visit the project",
@@ -131,13 +134,14 @@
   },
   "AboutPage": {
     "eyebrow": "About",
-    "title": "Talum, a pragmatic and reliable approach.",
-    "description": "Background, values and working method of Armel BOUGMA, founder of Talum, in Lille and Abidjan.",
+    "title": "Taloom, a pragmatic and reliable approach.",
+    "description": "Background, values and working method of Armel BOUGMA, founder of Taloom, in Lille and Abidjan.",
     "intro": "I design useful, maintainable digital solutions that fit my clients’ environment.",
     "founderLabel": "Founder",
     "founderName": "Armel BOUGMA",
+    "founderPhotoAlt": "Portrait of Armel BOUGMA, founder of Taloom",
     "founderRole": "Lead developer and project manager · Lille & Abidjan",
-    "storyTitle": "Why Talum",
+    "storyTitle": "Why Taloom",
     "story": "In Lille and Abidjan, I support small businesses, startups, schools and non-profits that need a serious contact able to scope, build and support a digital project without unnecessary jargon.",
     "storySecond": "Work always starts from the real need: understand the business, write the scope, choose a proportionate architecture and deliver something useful. Everything else — technology, tools, method — serves that outcome.",
     "valuesTitle": "Values",
@@ -220,13 +224,13 @@
   "LegalPage": {
     "eyebrow": "Legal notice",
     "title": "Legal notice",
-    "intro": "Administrative information, responsibilities and terms of use of the Talum website.",
+    "intro": "Administrative information, responsibilities and terms of use of the Taloom website.",
     "identityTitle": "Site publisher",
-    "identityText": "The Talum website is published by an independent structure. Official information — legal status, SIRET, registered address, VAT and publication director — must be completed before launch.",
+    "identityText": "The Taloom website is published by an independent structure. Official information — legal status, SIRET, registered address, VAT and publication director — must be completed before launch.",
     "contactTitle": "Contact",
     "contactText": "For any question or request, use the contact form available on the site. Final contact details must be validated before production release.",
     "responsibilityTitle": "Liability",
-    "responsibilityText": "Talum strives to provide reliable and up-to-date information but does not guarantee the absence of errors or omissions. Content is provided for information only and may change at any time."
+    "responsibilityText": "Taloom strives to provide reliable and up-to-date information but does not guarantee the absence of errors or omissions. Content is provided for information only and may change at any time."
   },
   "PrivacyPage": {
     "eyebrow": "Privacy",
@@ -250,9 +254,18 @@
       "platform": "Platform / SaaS"
     },
     "scope": "Complexity level",
-    "scopeLevels": ["Simple", "Medium", "High", "Full"],
+    "scopeLevels": [
+      "Simple",
+      "Medium",
+      "High",
+      "Full"
+    ],
     "urgency": "Urgency",
-    "urgencyLevels": ["Standard", "Comfortable", "Priority"],
+    "urgencyLevels": [
+      "Standard",
+      "Comfortable",
+      "Priority"
+    ],
     "addOns": "Options",
     "aiAutomation": "AI automation",
     "opsSetup": "Cloud / CI-CD support",
@@ -265,7 +278,7 @@
     "contact": "Talk about my project",
     "pendingLabel": "Estimator in preparation",
     "pendingTitle": "Pricing will be published after validation.",
-    "pendingText": "The calculation engine is ready and tested. Daily rates, coefficients and the VAT regime still need to be provided and approved by Talum: no priced estimate is shown until then.",
+    "pendingText": "The calculation engine is ready and tested. Daily rates, coefficients and the VAT regime still need to be provided and approved by Taloom: no priced estimate is shown until then.",
     "pendingItemOne": "Pure, tested and traceable engine",
     "pendingItemTwo": "No invented prices or default values",
     "pendingItemThree": "Range, VAT and PDF once pricing is validated",
@@ -277,12 +290,330 @@
     "vatLabel": "VAT",
     "totalTtcLabel": "Total incl. VAT",
     "durationLabel": "Indicative duration",
-    "weeks": "{min} to {max} weeks"
+    "weeks": "{min} to {max} weeks",
+    "gridEyebrow": "Indicative grid",
+    "gridTitle": "Proposed pricing grid",
+    "gridIntro": "Daily rates excl. VAT and base workload per service. Amounts are indicative and will be confirmed after scoping.",
+    "gridCaption": "Daily rate excl. VAT and base workload per service",
+    "gridService": "Service",
+    "gridDailyRate": "Rate excl. VAT / day",
+    "gridBaseDays": "Base workload",
+    "gridDayUnit": "{days} d",
+    "gridNote": "Proposed, non-binding grid. It excludes VAT, AI model usage and infrastructure costs.",
+    "gridVersion": "Grid version: {version}",
+    "aiNote": "AI is a distinct service line: audit, use cases, prototype, RAG, agents, evaluation and training. Model and infrastructure costs are rebilled at actual cost.",
+    "vatPending": "To be defined",
+    "htOnlyNote": "Amounts excl. VAT. VAT and the total incl. VAT will be displayed once the applicable regime is validated.",
+    "proposalText": "Indicative estimate calculated from the proposed pricing grid. Amounts are excl. VAT.",
+    "htLabel": "excl. VAT",
+    "gridOnRequest": "On request",
+    "weeksSingle": "{weeks, plural, one {# week} other {# weeks}}",
+    "exampleLabel": "Example: standard marketing site",
+    "exampleNote": "Includes initial scoping and production rollout. Excludes VAT, AI models and infrastructure."
   },
   "Footer": {
     "statement": "Design and support for digital projects.",
     "legal": "Legal notice",
     "privacy": "Privacy",
     "copyright": "All rights reserved."
+  },
+  "Advisor": {
+    "approaches": {
+      "cadrage": "Scoping and prioritisation",
+      "mvp": "Deliverable MVP",
+      "plateforme": "Scalable platform",
+      "api": "API and data foundation",
+      "fiabilisation": "Stabilising the existing system",
+      "automatisation": "Governed automation",
+      "audit": "Technical audit",
+      "evolution": "Evolving the existing system"
+    },
+    "reasons": {
+      "difficulte": "The project is in difficulty: an audit identifies the causes before new work is committed.",
+      "conseil": "The request calls for a technical opinion: a focused audit clarifies options and risks.",
+      "reprendre": "Taking over an existing system first requires understanding its real state, dependencies and breaking points.",
+      "ia": "An AI use case must be governed: prototype, quality measurement, costs and safeguards before integration.",
+      "automatiser": "The goal is to automate a task: a measurable scope and human validation are defined before production.",
+      "cloud": "The need is infrastructure-related: containers, deployment, backups and monitoring are treated as a foundation.",
+      "fiabiliser": "The existing system must be stabilised: priorities are stability, monitoring and reversible releases.",
+      "api": "The project exposes data or services: the API contract, security and tests come first.",
+      "existant": "A product already exists: the approach favours incremental delivery without breaking live journeys.",
+      "idee": "The need is still an idea: a short scoping phase sets the problem, scope and success criteria.",
+      "formation": "The goal includes knowledge transfer: scoping and explicit working formats are set from the start.",
+      "budgetLimite": "The budget is constrained: tight scoping helps choose a first genuinely useful scope.",
+      "plateforme": "The project is an application with broad ambition: a scalable platform avoids rebuilding the foundation at every step.",
+      "delai": "The deadline is tight: a prioritised MVP focuses effort on essential journeys.",
+      "siteVendre": "The site must sell: an MVP focused on the message, contact journeys and measurement is preferred.",
+      "appCadre": "The application need is scoped: an MVP delivers essential journeys and allows later adjustment.",
+      "siteCadre": "The site need is scoped: an MVP delivers a useful, measurable first version.",
+      "fallback": "The answers do not trigger a specific rule: short scoping helps clarify the need."
+    },
+    "stack": {
+      "scrum": "Scrum",
+      "kanban": "Kanban",
+      "githubProjects": "GitHub Projects",
+      "nextjs": "Next.js",
+      "react": "React",
+      "typescript": "TypeScript",
+      "postgresql": "PostgreSQL",
+      "node": "Node.js",
+      "docker": "Docker",
+      "openapi": "OpenAPI",
+      "tests": "Automated tests",
+      "githubActions": "GitHub Actions",
+      "vps": "Linux VPS",
+      "nginx": "Nginx",
+      "observability": "Monitoring and alerts",
+      "llmApis": "LLM APIs",
+      "rag": "RAG",
+      "automation": "Automation",
+      "python": "Python",
+      "auditedSystem": "Audited system",
+      "existingSystem": "Existing system",
+      "cicd": "CI/CD"
+    },
+    "risks": {
+      "perimetre": "Scope",
+      "delai": "Deadline",
+      "securite": "Security",
+      "conformite": "Compliance",
+      "integration": "Integration",
+      "budget": "Budget",
+      "transfert": "Knowledge transfer",
+      "hebergement": "Hosting",
+      "qualite": "Quality",
+      "donnees": "Data",
+      "dependance": "Dependency",
+      "regression": "Regression",
+      "dette": "Technical debt",
+      "complexite": "Complexity"
+    },
+    "nextSteps": {
+      "contact": "A conversation to clarify the context.",
+      "cadrage": "A scoping workshop to define the scope.",
+      "audit": "A short audit to establish a diagnosis."
+    },
+    "assumptions": {
+      "answers": "The recommendation relies only on the answers provided.",
+      "duration": "The duration is an order of magnitude, not a commitment.",
+      "constraints": "Selected constraints add time and watch points.",
+      "noPrice": "No price is calculated or displayed.",
+      "config": "The rules are versioned and deterministic."
+    },
+    "disclaimers": {
+      "noCommitment": "This opinion is indicative and constitutes neither a quote nor a contractual commitment.",
+      "humanValidation": "Human validation remains necessary before any work begins.",
+      "rulesBased": "The advisor applies written rules; it does not use a language model."
+    }
+  },
+  "AdvisorPage": {
+    "eyebrow": "Advice",
+    "title": "Five questions to clarify your project.",
+    "description": "A structured first opinion: recommended approach, indicative stack, duration and watch points.",
+    "intro": "This advisor applies written rules to suggest an approach, an indicative duration and watch points. It does not replace a human conversation and produces no price, quote or commitment.",
+    "progressLabel": "Progress",
+    "step": "Step {current} of {total}",
+    "stepAnnouncement": "Step {current} of {total}: {title}",
+    "steps": {
+      "projectType": "Project type",
+      "goal": "Goal",
+      "stage": "Stage",
+      "constraints": "Constraints",
+      "budget": "Budget"
+    },
+    "questions": {
+      "projectType": "What type of project is it?",
+      "goal": "What is the main goal?",
+      "stage": "Where does the project stand today?",
+      "constraints": "Which constraints already apply?",
+      "constraintsHelp": "Select everything that applies. This step is optional.",
+      "budget": "What budget do you have in mind?"
+    },
+    "projectTypes": {
+      "site": "Marketing or institutional site",
+      "app": "Business application",
+      "api": "API or data foundation",
+      "cloud": "Cloud, DevOps or infrastructure",
+      "ia": "AI or automation",
+      "conseil": "Consulting or technical audit"
+    },
+    "projectTypeHints": {
+      "site": "Present an activity, publish content, generate leads.",
+      "app": "Manage users, data and business processes.",
+      "api": "Expose data or services to other applications.",
+      "cloud": "Deploy, monitor and secure infrastructure.",
+      "ia": "Automate a task or integrate a governed AI use case.",
+      "conseil": "Review an architecture, codebase or struggling project."
+    },
+    "goals": {
+      "lancer": "Launch the project",
+      "vendre": "Sell or generate leads",
+      "fiabiliser": "Stabilise the existing system",
+      "automatiser": "Automate a task",
+      "reprendre": "Take over an existing project",
+      "former": "Train or transfer knowledge"
+    },
+    "goalHints": {
+      "lancer": "The project is not in production yet.",
+      "vendre": "The site must support commercial activity.",
+      "fiabiliser": "The priority is stability and operations.",
+      "automatiser": "A repetitive task consumes time.",
+      "reprendre": "A vendor or team has already worked on it.",
+      "former": "The teams must become more autonomous."
+    },
+    "stages": {
+      "idee": "Idea",
+      "cadre": "Scoped need",
+      "existant": "Existing product",
+      "difficulte": "Project in difficulty"
+    },
+    "stageHints": {
+      "idee": "The problem and expected outcome still need clarification.",
+      "cadre": "Objectives and scope are already written.",
+      "existant": "A first version is in production.",
+      "difficulte": "The project is blocked, unstable or contested."
+    },
+    "constraints": {
+      "delai": "Tight deadline",
+      "budget-limite": "Limited budget",
+      "securite": "Security requirements",
+      "conformite": "Compliance or GDPR",
+      "integration": "Integration with an existing system",
+      "equipe-interne": "Internal team to involve",
+      "hebergement": "Imposed hosting"
+    },
+    "budgets": {
+      "limite": "Limited",
+      "modere": "Moderate",
+      "confortable": "Comfortable",
+      "a-definir": "To be defined"
+    },
+    "budgetHints": {
+      "limite": "Focus on a first useful scope.",
+      "modere": "A solid scope with trade-offs.",
+      "confortable": "A broader, scalable project.",
+      "a-definir": "The budget will be defined after scoping."
+    },
+    "required": "Choose an answer to continue.",
+    "back": "Back",
+    "next": "Continue",
+    "submit": "See the recommendation",
+    "restart": "Start over",
+    "edit": "Edit my answers",
+    "resultEyebrow": "Recommendation",
+    "resultIntro": "This recommendation follows from your answers and the versioned rules below.",
+    "reasonLabel": "Why this approach",
+    "durationLabel": "Indicative duration",
+    "duration": "{min} to {max} weeks",
+    "durationNote": "Order of magnitude, excluding decision, validation and content availability time.",
+    "stackLabel": "Indicative stack",
+    "risksLabel": "Watch points",
+    "assumptionsLabel": "Assumptions",
+    "disclaimersLabel": "Keep in mind",
+    "nextStepLabel": "Next step",
+    "nextStepCta": {
+      "contact": "Talk about my project",
+      "cadrage": "Request scoping",
+      "audit": "Request an audit"
+    },
+    "traceabilityLabel": "Traceability",
+    "ruleLabel": "Applied rule",
+    "configVersion": "Rules version",
+    "noLlm": "Deterministic rules, no generative AI.",
+    "error": "The recommendation could not be calculated. Please try again or contact us directly.",
+    "bottomTitle": "A recommendation does not replace a conversation.",
+    "bottomText": "Short scoping helps validate the scope, constraints and next steps.",
+    "bottomCta": "Talk about my project"
+  },
+  "EstimatePricing": {
+    "services": {
+      "web": "Web and application development",
+      "api": "APIs and integrations",
+      "cloudDevops": "Cloud & DevOps",
+      "gestionDeProjet": "Project management",
+      "ia": "AI and automation",
+      "conseil": "Consulting and technical audit"
+    },
+    "features": {
+      "web": {
+        "pages": "Additional pages and journeys",
+        "authentification": "Authentication and accounts",
+        "paiement": "Online payment",
+        "backOffice": "Admin back office",
+        "integrations": "Third-party integrations",
+        "multilingue": "Multilingual"
+      },
+      "api": {
+        "authentification": "Authentication and authorisation",
+        "integrations": "Third-party integrations",
+        "tempsReel": "Real-time",
+        "notifications": "Notifications",
+        "documentation": "API documentation and contract"
+      },
+      "cloud": {
+        "conteneurisation": "Containerisation",
+        "ciCd": "Continuous integration and delivery",
+        "supervision": "Monitoring and alerts",
+        "sauvegardes": "Backup and restore",
+        "secrets": "Secret management"
+      },
+      "pm": {
+        "accompagnement": "Weekly support",
+        "recette": "Acceptance testing",
+        "formation": "Training and handover",
+        "reporting": "Reporting and steering meetings",
+        "coordination": "Partner coordination"
+      },
+      "ia": {
+        "audit": "AI audit and use-case scoping",
+        "chatbot": "Chatbot or assistant",
+        "rag": "Document RAG",
+        "agents": "Agents and tool orchestration",
+        "automatisation": "Task automation",
+        "evaluation": "Quality evaluation",
+        "formation": "AI training and awareness"
+      },
+      "conseil": {
+        "auditArchitecture": "Architecture audit",
+        "auditCode": "Code audit",
+        "auditSecurite": "Security audit",
+        "atelier": "Findings workshop",
+        "planAction": "Action plan"
+      }
+    },
+    "constraints": {
+      "securite": "Security requirements",
+      "conformite": "Compliance / GDPR",
+      "conformiteIa": "AI compliance / AI Act",
+      "integration": "Integration with an existing system",
+      "hebergement": "Imposed hosting",
+      "maintenance": "Maintenance takeover"
+    },
+    "fees": {
+      "cadrage": "Initial scoping",
+      "miseEnProduction": "Production rollout"
+    },
+    "exclusions": {
+      "contenus": "Content writing and production",
+      "licences": "Software licences and subscriptions",
+      "deplacements": "Travel and accommodation",
+      "fraisLegaux": "Legal and administrative fees",
+      "supportUrgence": "Support and emergency interventions",
+      "coutModeles": "LLM and API model usage (billed at actual cost)",
+      "infrastructure": "Cloud infrastructure, storage and third-party services (billed at actual cost)"
+    },
+    "vatFranchise": "VAT wording to be defined according to the applicable regime.",
+    "lines": {
+      "riskMargin": "Risk margin",
+      "rounding": "Rounding"
+    },
+    "assumptions": {
+      "workingDaysPerWeek": "Working days per week: {days}",
+      "roundingStep": "Amount rounding: {amount} €",
+      "dayRounding": "Day rounding: {days}",
+      "riskMargin": "Risk margin: {percent}",
+      "rangeSpread": "Range spread: {percent}",
+      "vatRegime": "VAT regime: {regime}"
+    }
   }
 }

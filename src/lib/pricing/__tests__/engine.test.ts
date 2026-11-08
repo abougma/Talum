@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { pricingConfig } from "../config";
 import {
   computeEstimate,
   getMissingConfigFields,
@@ -183,8 +182,31 @@ describe("TVA", () => {
 });
 
 describe("configuration en attente", () => {
-  it("ne publie aucun prix avec la configuration publique balisée", () => {
-    const result = computeEstimate(pricingConfig, {
+  const pendingConfig: PricingConfig = {
+    ...fixtureConfig,
+    vat: { ...fixtureConfig.vat, regime: null, rate: null },
+    riskMarginRate: null,
+    rangeSpread: null,
+    complexityFactors: { simple: null, standard: null, avance: null, complet: null },
+    urgencyFactors: { standard: null, confort: null, prioritaire: null },
+    services: {
+      ...fixtureConfig.services,
+      web: {
+        ...fixtureConfig.services.web,
+        dailyRate: null,
+        baseDays: null,
+        features: fixtureConfig.services.web.features.map((feature) => ({
+          ...feature,
+          days: null,
+        })),
+      },
+    },
+    constraints: fixtureConfig.constraints.map((constraint) => ({ ...constraint, days: null })),
+    fees: fixtureConfig.fees.map((fee) => ({ ...fee, amount: null })),
+  };
+
+  it("ne publie aucun prix avec une configuration incomplète", () => {
+    const result = computeEstimate(pendingConfig, {
       service: "web",
       features: [],
       constraints: [],
@@ -218,7 +240,7 @@ describe("configuration en attente", () => {
   });
 
   it("conserve des lignes traçables même sans montant", () => {
-    const result = computeEstimate(pricingConfig, {
+    const result = computeEstimate(pendingConfig, {
       service: "web",
       features: [],
       constraints: [],
@@ -240,7 +262,7 @@ describe("configuration en attente", () => {
   });
 
   it("ne produit jamais NaN dans les valeurs numériques", () => {
-    const result = computeEstimate(pricingConfig, nominalInput);
+    const result = computeEstimate(pendingConfig, nominalInput);
     const values = [
       result.totalDays,
       result.subtotalHT,
@@ -264,8 +286,8 @@ describe("configuration en attente", () => {
     }
   });
 
-  it("liste les valeurs client manquantes de la configuration publique", () => {
-    const missing = getMissingConfigFields(pricingConfig);
+  it("liste les valeurs client manquantes d’une configuration incomplète", () => {
+    const missing = getMissingConfigFields(pendingConfig);
 
     expect(missing).toEqual(
       expect.arrayContaining([
@@ -276,9 +298,9 @@ describe("configuration en attente", () => {
         "complexityFactors.complet",
         "urgencyFactors.standard",
         "urgencyFactors.prioritaire",
-        "services.api.dailyRate",
-        "services.ia.baseDays",
-        "services.conseil.features.audit-code.days",
+        "services.web.dailyRate",
+        "services.web.baseDays",
+        "services.web.features.pages.days",
         "constraints.securite.days",
         "fees.cadrage.amount",
       ]),
@@ -288,6 +310,25 @@ describe("configuration en attente", () => {
 
   it("ne signale aucune valeur manquante sur la configuration de test", () => {
     expect(getMissingConfigFields(fixtureConfig)).toEqual([]);
+  });
+});
+
+describe("préparation HT sans TVA", () => {
+  const htConfig: PricingConfig = {
+    ...fixtureConfig,
+    vat: { ...fixtureConfig.vat, regime: null, rate: null },
+  };
+
+  it("calcule le HT et la fourchette HT, sans TVA ni TTC", () => {
+    const result = computeEstimate(htConfig, nominalInput);
+
+    expect(result.status).toBe("ready-ht");
+    expect(result.totalHT).toBe(21100);
+    expect(result.rangeHT).toEqual({ min: 17950, max: 24250 });
+    expect(result.vat.amount).toBeNull();
+    expect(result.totalTTC).toBeNull();
+    expect(result.rangeTTC).toBeNull();
+    expect(result.missingConfig).toEqual(["vat.regime"]);
   });
 });
 

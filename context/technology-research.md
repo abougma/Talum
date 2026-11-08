@@ -1,4 +1,4 @@
-# Phase 1 — Recherche technique (Talum)
+# Phase 1 — Recherche technique (Taloom)
 
 Périmètre : vitrine + estimateur + PDF serveur + e-mail transactionnel + assistant à règles + contenu éditable + tests + CI/CD.
 Méthode : versions relevées sur le registre npm et la documentation officielle le **2026-11-05** ; aucune installation exécutée.

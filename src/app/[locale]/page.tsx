@@ -34,7 +34,17 @@ export default async function HomePage({ params }: Props) {
       <section aria-labelledby="home-title" className="hero page-container">
         <div className="hero-copy">
           <p className="eyebrow">{t("eyebrow")}</p>
-          <h1 id="home-title">{t("title")}</h1>
+          <h1 aria-label={t("title")} id="home-title">
+            {t("title")
+              .split(" ")
+              .map((word, index) => (
+                <span key={`${word}-${index}`}>
+                  <span aria-hidden="true" className="hero-title-word">
+                    {word}
+                  </span>{" "}
+                </span>
+              ))}
+          </h1>
           <p className="lead">{t("intro")}</p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/estimate">
@@ -46,6 +56,31 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
         <aside aria-label={t("proofLabel")} className="proof-panel">
+          <svg aria-hidden="true" className="hero-orbit" fill="none" viewBox="0 0 120 120">
+            <ellipse cx="60" cy="60" rx="47" ry="20" stroke="currentColor" strokeWidth="1.5" />
+            <ellipse
+              cx="60"
+              cy="60"
+              rx="47"
+              ry="20"
+              stroke="currentColor"
+              strokeOpacity=".45"
+              strokeWidth="1.5"
+              transform="rotate(60 60 60)"
+            />
+            <ellipse
+              cx="60"
+              cy="60"
+              rx="47"
+              ry="20"
+              stroke="currentColor"
+              strokeOpacity=".45"
+              strokeWidth="1.5"
+              transform="rotate(120 60 60)"
+            />
+            <circle cx="60" cy="60" r="7" fill="currentColor" />
+            <circle cx="107" cy="60" r="4" fill="currentColor" />
+          </svg>
           <p className="eyebrow">{t("proofLabel")}</p>
           <h2>{proofProject?.title ?? "Gestilok"}</h2>
           <p>{t("proofText")}</p>
@@ -151,7 +186,7 @@ export default async function HomePage({ params }: Props) {
           <article className="path-card">
             <h3>{t("advicePathTitle")}</h3>
             <p>{t("advicePathText")}</p>
-            <Link className="button button-secondary" href="/services#conseil">
+            <Link className="button button-secondary" href="/conseil">
               {t("advicePathCta")}
             </Link>
           </article>

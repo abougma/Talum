@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { ScrollStory } from "@/components/scroll-story";
 import { getServices } from "@/data/services";
 
 type Props = {
@@ -21,7 +22,15 @@ export default async function ServicesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "ServicesPage" });
+  const tStory = await getTranslations({ locale, namespace: "ScrollStories" });
   const services = getServices(locale);
+  const storySteps = services.map((service) => ({
+    href: `#${service.slug}`,
+    linkLabel: tStory("detailLink"),
+    meta: service.number,
+    text: service.tagline,
+    title: service.title,
+  }));
 
   return (
     <main id="main" className="page-container content-page">
@@ -31,19 +40,14 @@ export default async function ServicesPage({ params }: Props) {
         <p className="lead">{t("intro")}</p>
       </header>
 
-      <nav aria-label={t("summaryLabel")} className="anchor-nav">
-        <p className="eyebrow">{t("summaryLabel")}</p>
-        <ul>
-          {services.map((service) => (
-            <li key={service.slug}>
-              <a href={`#${service.slug}`}>
-                <span>{service.number}</span>
-                {service.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <ScrollStory
+        eyebrow={tStory("services.eyebrow")}
+        id="expertises"
+        intro={tStory("services.intro")}
+        steps={storySteps}
+        title={tStory("services.title")}
+        variant="expertises"
+      />
 
       <div className="service-list">
         {services.map((service) => (

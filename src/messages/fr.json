@@ -25,11 +25,15 @@
     "intro": "Développement web et applicatif, cloud & DevOps, gestion de projet, intelligence artificielle et conseil technique. Un interlocuteur, de l’idée au suivi.",
     "estimateCta": "Estimer mon projet",
     "projectsCta": "Voir les réalisations",
-    "proofLabel": "Projet mis en production",
-    "proofText": "SaaS de gestion locative conçu et mis en production, avec des utilisateurs réels. PHP/Laravel, JavaScript, VPS et CI/CD.",
-    "proofFactOne": "Conçu, développé et déployé",
-    "proofFactTwo": "Utilisateurs réels en production",
-    "proofFactThree": "Chaîne CI/CD sur VPS",
+    "proofLabel": "Un projet réel, en production",
+    "proofText": "Un outil pensé pour simplifier le quotidien des gestionnaires immobiliers.",
+    "proofLink": "Découvrir le projet",
+    "previewLabel": "ESPACE GESTION",
+    "previewOverview": "Vue d’ensemble",
+    "previewProperties": "Biens",
+    "previewPropertyOne": "Appartement lumineux",
+    "previewPropertyTwo": "Maison familiale",
+    "previewPropertyStatus": "Location en cours",
     "expertisesLabel": "Expertises",
     "expertisesTitle": "Cinq façons d’intervenir sur votre projet.",
     "expertisesIntro": "Chaque expertise a un périmètre, des livrables et un profil de client identifiés. Elles se combinent selon le besoin.",
@@ -310,6 +314,50 @@
     "weeksSingle": "{weeks, plural, one {# semaine} other {# semaines}}",
     "exampleLabel": "Exemple : site web standard",
     "exampleNote": "Inclut le cadrage initial et la mise en production. Hors TVA, modèles IA et infrastructure."
+  },
+  "ScrollStories": {
+    "progressLabel": "Progression de la section",
+    "detailLink": "Voir le détail",
+    "caseLink": "Lire l’étude de cas",
+    "services": {
+      "eyebrow": "Vue d’ensemble",
+      "title": "Cinq expertises, un seul interlocuteur.",
+      "intro": "Chaque expertise répond à un besoin précis et peut être combinée aux autres. Faites défiler pour parcourir le périmètre."
+    },
+    "projects": {
+      "eyebrow": "Projets phares",
+      "title": "Trois contextes, trois réponses.",
+      "intro": "Un aperçu des projets présentés en détail plus bas : le contexte, la réponse et la stack."
+    },
+    "advisor": {
+      "eyebrow": "Fonctionnement",
+      "title": "Un avis structuré, sans boîte noire.",
+      "intro": "Quatre étapes pour passer d’un besoin flou à une direction argumentée.",
+      "steps": [
+        {
+          "title": "Cinq questions",
+          "text": "Type de projet, objectif, avancement, contraintes et budget : le cadre est posé."
+        },
+        {
+          "title": "Des règles écrites",
+          "text": "Chaque recommandation découle de règles versionnées et lisibles. Aucun modèle de langage n’est utilisé."
+        },
+        {
+          "title": "Une recommandation",
+          "text": "Approche, stack indicative et durée forment une première direction argumentée."
+        },
+        {
+          "title": "Les points de vigilance",
+          "text": "Risques, hypothèses et prochaine étape sont explicités avant tout engagement."
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "Parcours",
+      "title": "Une trajectoire, un ancrage, des principes.",
+      "intro": "Le parcours, les zones d’intervention et les valeurs qui guident le travail.",
+      "originTitle": "Le point de départ"
+    }
   },
   "Footer": {
     "statement": "Conception et accompagnement de projets numériques.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { AdvisorWizard } from "@/components/advisor-wizard";
+import { ScrollStory } from "@/components/scroll-story";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,6 +22,8 @@ export default async function AdvisorPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "AdvisorPage" });
+  const tStory = await getTranslations({ locale, namespace: "ScrollStories" });
+  const storySteps = tStory.raw("advisor.steps") as { title: string; text: string }[];
 
   return (
     <main id="main" className="page-container content-page">
@@ -29,6 +32,15 @@ export default async function AdvisorPage({ params }: Props) {
         <h1>{t("title")}</h1>
         <p className="lead">{t("intro")}</p>
       </header>
+
+      <ScrollStory
+        eyebrow={tStory("advisor.eyebrow")}
+        id="fonctionnement-conseil"
+        intro={tStory("advisor.intro")}
+        steps={storySteps}
+        title={tStory("advisor.title")}
+        variant="advice"
+      />
 
       <AdvisorWizard />
 

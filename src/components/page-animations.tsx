@@ -21,12 +21,11 @@ export function PageAnimations({ children }: { children: ReactNode }) {
       const titleWords = root.querySelectorAll(".hero-title-word");
       const hero = root.querySelector(".hero");
       const proofPanel = root.querySelector(".proof-panel");
-      const orbit = root.querySelector(".hero-orbit");
       const sections = gsap.utils.toArray<HTMLElement>(
         [
-          "main > section:not(.hero)",
+          "main > section:not(.hero):not(.scroll-story)",
           "main.content-page > .page-header",
-          "main.content-page > section",
+          "main.content-page > section:not(.scroll-story)",
           "main.content-page > .projects-grid",
           "main.content-page > .case-header",
           "main.content-page > .case-body",
@@ -77,17 +76,6 @@ export function PageAnimations({ children }: { children: ReactNode }) {
           duration: 1,
           delay: 0.3,
           ease: "power3.out",
-        });
-      }
-
-      if (orbit) {
-        gsap.to(orbit, {
-          y: -9,
-          rotation: 12,
-          duration: 3.2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
         });
       }
 

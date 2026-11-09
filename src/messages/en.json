@@ -25,11 +25,15 @@
     "intro": "Web and application development, cloud & DevOps, project management, artificial intelligence and technical consulting. One contact, from idea to follow-up.",
     "estimateCta": "Estimate my project",
     "projectsCta": "See the work",
-    "proofLabel": "Project in production",
-    "proofText": "Rental management SaaS designed and shipped to production, with real users. PHP/Laravel, JavaScript, VPS and CI/CD.",
-    "proofFactOne": "Designed, built and deployed",
-    "proofFactTwo": "Real users in production",
-    "proofFactThree": "CI/CD pipeline on a VPS",
+    "proofLabel": "A real project, in production",
+    "proofText": "A tool designed to make property management easier, day to day.",
+    "proofLink": "Explore the project",
+    "previewLabel": "PROPERTY MANAGEMENT",
+    "previewOverview": "Overview",
+    "previewProperties": "Properties",
+    "previewPropertyOne": "Bright apartment",
+    "previewPropertyTwo": "Family home",
+    "previewPropertyStatus": "Currently rented",
     "expertisesLabel": "Expertise",
     "expertisesTitle": "Five ways to move your project forward.",
     "expertisesIntro": "Each expertise has a defined scope, deliverables and client profile. They combine as the need requires.",
@@ -310,6 +314,50 @@
     "weeksSingle": "{weeks, plural, one {# week} other {# weeks}}",
     "exampleLabel": "Example: standard marketing site",
     "exampleNote": "Includes initial scoping and production rollout. Excludes VAT, AI models and infrastructure."
+  },
+  "ScrollStories": {
+    "progressLabel": "Section progress",
+    "detailLink": "View details",
+    "caseLink": "Read the case study",
+    "services": {
+      "eyebrow": "Overview",
+      "title": "Five expertises, one point of contact.",
+      "intro": "Each expertise answers a specific need and can be combined with the others. Scroll to review the scope."
+    },
+    "projects": {
+      "eyebrow": "Featured work",
+      "title": "Three contexts, three answers.",
+      "intro": "A preview of the projects detailed below: context, response and stack."
+    },
+    "advisor": {
+      "eyebrow": "How it works",
+      "title": "A structured opinion, no black box.",
+      "intro": "Four steps from an unclear need to a reasoned direction.",
+      "steps": [
+        {
+          "title": "Five questions",
+          "text": "Project type, goal, stage, constraints and budget: the frame is set."
+        },
+        {
+          "title": "Written rules",
+          "text": "Each recommendation comes from versioned, readable rules. No language model is used."
+        },
+        {
+          "title": "A recommendation",
+          "text": "Approach, indicative stack and duration form a first reasoned direction."
+        },
+        {
+          "title": "Points of attention",
+          "text": "Risks, assumptions and the next step are made explicit before any commitment."
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "Background",
+      "title": "A path, an anchor, principles.",
+      "intro": "The background, the areas of work and the values that guide the work.",
+      "originTitle": "The starting point"
+    }
   },
   "Footer": {
     "statement": "Design and support for digital projects.",

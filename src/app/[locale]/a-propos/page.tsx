@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { ScrollStory } from "@/components/scroll-story";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -25,6 +26,12 @@ export default async function AboutPage({ params }: Props) {
   const values = t.raw("values") as string[];
   const zones = t.raw("zones") as string[];
   const methodSteps = t.raw("methodSteps") as { title: string; text: string }[];
+  const tStory = await getTranslations({ locale, namespace: "ScrollStories" });
+  const storySteps = [
+    { text: t("story"), title: tStory("about.originTitle") },
+    { points: zones, title: t("zonesTitle") },
+    { points: values, title: t("valuesTitle") },
+  ];
 
   return (
     <main id="main" className="page-container content-page">
@@ -52,30 +59,18 @@ export default async function AboutPage({ params }: Props) {
         </div>
         <div className="founder-story">
           <h2>{t("storyTitle")}</h2>
-          <p>{t("story")}</p>
           <p>{t("storySecond")}</p>
         </div>
       </section>
 
-      <section aria-labelledby="values-title" className="split-grid">
-        <div className="info-card">
-          <h2 id="values-title">{t("valuesTitle")}</h2>
-          <ul className="bullet-list">
-            {values.map((value) => (
-              <li key={value}>{value}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="info-card">
-          <h2>{t("zonesTitle")}</h2>
-          <ul className="bullet-list">
-            {zones.map((zone) => (
-              <li key={zone}>{zone}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <ScrollStory
+        eyebrow={tStory("about.eyebrow")}
+        id="parcours"
+        intro={tStory("about.intro")}
+        steps={storySteps}
+        title={tStory("about.title")}
+        variant="about"
+      />
 
       <section aria-labelledby="about-method-title" className="home-section">
         <div className="section-heading">

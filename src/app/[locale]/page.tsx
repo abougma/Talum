@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { ScrollStory } from "@/components/scroll-story";
 import { getFeaturedProjects } from "@/data/projects";
 import { getServices } from "@/data/services";
 
@@ -56,39 +57,82 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
         <aside aria-label={t("proofLabel")} className="proof-panel">
-          <svg aria-hidden="true" className="hero-orbit" fill="none" viewBox="0 0 120 120">
-            <ellipse cx="60" cy="60" rx="47" ry="20" stroke="currentColor" strokeWidth="1.5" />
-            <ellipse
-              cx="60"
-              cy="60"
-              rx="47"
-              ry="20"
-              stroke="currentColor"
-              strokeOpacity=".45"
-              strokeWidth="1.5"
-              transform="rotate(60 60 60)"
-            />
-            <ellipse
-              cx="60"
-              cy="60"
-              rx="47"
-              ry="20"
-              stroke="currentColor"
-              strokeOpacity=".45"
-              strokeWidth="1.5"
-              transform="rotate(120 60 60)"
-            />
-            <circle cx="60" cy="60" r="7" fill="currentColor" />
-            <circle cx="107" cy="60" r="4" fill="currentColor" />
-          </svg>
-          <p className="eyebrow">{t("proofLabel")}</p>
-          <h2>{proofProject?.title ?? "Gestilok"}</h2>
-          <p>{t("proofText")}</p>
-          <ul className="proof-facts">
-            <li>{t("proofFactOne")}</li>
-            <li>{t("proofFactTwo")}</li>
-            <li>{t("proofFactThree")}</li>
-          </ul>
+          <div aria-hidden="true" className="product-preview">
+            <div className="product-browser-bar">
+              <span />
+              <span />
+              <span />
+              <span className="product-browser-address">gestilok.com</span>
+            </div>
+            <div className="product-app">
+              <div className="product-app-header">
+                <span className="product-brand">
+                  <span className="product-brand-mark">g</span>
+                  gestilok
+                </span>
+                <span className="product-avatar">A</span>
+              </div>
+              <div className="product-app-body">
+                <div className="product-sidebar">
+                  <span className="is-active" />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="product-dashboard">
+                  <div className="product-dashboard-title">
+                    <div>
+                      <span>{t("previewLabel")}</span>
+                      <strong>{t("previewOverview")}</strong>
+                    </div>
+                    <span className="product-add">+</span>
+                  </div>
+                  <div className="product-summary">
+                    <span className="product-summary-icon">⌂</span>
+                    <span>
+                      <small>{t("previewProperties")}</small>
+                      <i />
+                    </span>
+                    <span className="product-summary-bars">
+                      <i />
+                      <i />
+                      <i />
+                    </span>
+                  </div>
+                  <div className="product-list-heading">
+                    <strong>{t("previewProperties")}</strong>
+                    <span>•••</span>
+                  </div>
+                  <div className="product-property">
+                    <span className="property-illustration property-illustration-one" />
+                    <span className="product-property-copy">
+                      <strong>{t("previewPropertyOne")}</strong>
+                      <small>{t("previewPropertyStatus")}</small>
+                    </span>
+                    <i />
+                  </div>
+                  <div className="product-property">
+                    <span className="property-illustration property-illustration-two" />
+                    <span className="product-property-copy">
+                      <strong>{t("previewPropertyTwo")}</strong>
+                      <small>{t("previewPropertyStatus")}</small>
+                    </span>
+                    <i />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="proof-caption">
+            <div>
+              <p className="eyebrow">{t("proofLabel")}</p>
+              <h2>{proofProject?.title ?? "Gestilok"}</h2>
+              <p>{t("proofText")}</p>
+            </div>
+            <Link className="proof-link" href="/realisations/gestilok">
+              {t("proofLink")} <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
         </aside>
       </section>
 
@@ -146,27 +190,17 @@ export default async function HomePage({ params }: Props) {
             );
           })}
         </div>
-        <p className="section-note">{t("resultsNote")}</p>
       </section>
 
-      <section aria-labelledby="method-title" className="home-section page-container">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">03 / {t("methodLabel")}</p>
-            <h2 id="method-title">{t("methodTitle")}</h2>
-          </div>
-          <p className="section-intro">{t("methodIntro")}</p>
-        </div>
-        <ol className="method-steps">
-          {methodSteps.map((step, index) => (
-            <li key={step.title}>
-              <span className="step-number">{String(index + 1).padStart(2, "0")}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <ScrollStory
+        className="page-container"
+        eyebrow={`03 / ${t("methodLabel")}`}
+        id="methode"
+        intro={t("methodIntro")}
+        steps={methodSteps}
+        title={t("methodTitle")}
+        variant="method"
+      />
 
       <section aria-labelledby="paths-title" className="home-section page-container">
         <div className="section-heading">

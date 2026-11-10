@@ -3130,3 +3130,12 @@ input[type="range"] {
     transition: none;
   }
 }
+
+/* Repère de durée — page Cadrage & devis, sans montant */
+.quote-duration {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-archivo), sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
